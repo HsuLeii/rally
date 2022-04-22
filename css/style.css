@@ -1,0 +1,95 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.7;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.7;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+span {
+  font-size: 17px;
+  text-decoration: none;
+  line-height: 1.7;
+}
+
+a {
+  font-size: 17px;
+  text-decoration: none;
+  line-height: 1.7;
+}
+
+label {
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  padding: 0;
+  border-width: 0px;
+  border-style: none;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: grey;
+  opacity: 0.5;
+  cursor: auto;
+}
+
+*,
+body {
+  font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
+  letter-spacing: 1.5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=style.css.map */
