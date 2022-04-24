@@ -47,18 +47,21 @@ h4 {
 p {
   font-size: 17px;
   line-height: 1.7;
+  color: #2e3233;
 }
 
 span {
   font-size: 17px;
   text-decoration: none;
   line-height: 1.7;
+  color: #2e3233;
 }
 
 a {
   font-size: 17px;
   text-decoration: none;
   line-height: 1.7;
+  color: #2e3233;
 }
 
 label {
@@ -87,9 +90,113 @@ button:disabled {
 
 *,
 body {
-  font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
+  font-family: "Noto Sans", "Noto Sans TC", "Noto Sans SC", "Microsoft JhengHei", "Noto Sans TC", "Microsoft YaHei", "PingFang TC", "PingFang SC", "Heiti TC", "Heiti SC", "LiHei Pro", "STXihei", sans-serif;
   letter-spacing: 1.5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+header nav .container-fluid {
+  padding: 0px 5%;
+}
+
+header nav .container-fluid .navbar-brand img {
+  height: 50px;
+}
+
+header nav .container-fluid .navbar-collapse {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .container-fluid .navbar-collapse ul li .nav-link {
+  color: #2e3233;
+  padding: 0px 10px;
+}
+
+header nav .container-fluid .navbar-collapse ul li .nav-link.active {
+  color: #b284f6;
+}
+
+.news {
+  max-width: 1200px;
+  margin: 40px auto 0px;
+  overflow: hidden;
+}
+
+.news .news_title {
+  border-bottom: 1px solid;
+  -o-border-image: linear-gradient(to right, #b284f6, transparent) 30 30;
+     border-image: -webkit-gradient(linear, left top, right top, from(#b284f6), to(transparent)) 30 30;
+     border-image: linear-gradient(to right, #b284f6, transparent) 30 30;
+  padding-bottom: 5px;
+  margin: 0px auto 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news .news_title h4 {
+  color: #b284f6;
+}
+
+.news .news_title a {
+  color: #ff0000;
+}
+
+.news .news_title a:hover {
+  color: #cc0000;
+}
+
+.news .news_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.news .news_content .news_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 8px auto;
+  padding: 0 8px;
+}
+
+.news .news_content .news_item a {
+  width: calc(95% - 100px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news .news_content .news_item a:hover {
+  color: #161818;
+  font-weight: bold;
+}
+
+.news .news_content .news_item.important_information {
+  border-bottom: 1px solid #b284f6;
+}
+
+.news .news_content .news_item.important_information a {
+  color: #b284f6;
+}
+
+.news .news_content .news_item.important_information:hover {
+  color: #9454f3;
 }
 /*# sourceMappingURL=style.css.map */

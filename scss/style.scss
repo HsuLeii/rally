@@ -1,3 +1,8 @@
+$main_color: #b284f6;
+$dark_grey: #2e3233;
+$red:#ff0000;
+$transparent: transparent;
+
 body,
 div,
 dl,
@@ -47,18 +52,21 @@ h4 {
 p {
     font-size: 17px;
     line-height: 1.7;
+    color: $dark_grey;
 }
 
 span {
     font-size: 17px;
     text-decoration: none;
     line-height: 1.7;
+    color: $dark_grey;
 }
 
 a {
     font-size: 17px;
     text-decoration: none;
     line-height: 1.7;
+    color: $dark_grey;
 }
 
 label {
@@ -67,7 +75,7 @@ label {
 }
 
 img {
-    width: 80%;
+    width: 100%;
 }
 
 button {
@@ -87,14 +95,92 @@ button:disabled {
 
 *,
 body {
-    font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
+    font-family: "Noto Sans", "Noto Sans TC", "Noto Sans SC", "Microsoft JhengHei", "Noto Sans TC", "Microsoft YaHei",
+        "PingFang TC", "PingFang SC", "Heiti TC", "Heiti SC", "LiHei Pro", "STXihei", sans-serif;
     letter-spacing: 1.5px;
     box-sizing: border-box;
 }
 
 // header開始
-
-
-           img{
+header {
+    nav {
+        .container-fluid {
+            padding: 0px 5%;
+            .navbar-brand {
+                img {
                     height: 50px;
+                }
             }
+            .navbar-collapse {
+                justify-content: center;
+                ul {
+                    li {
+                        .nav-link {
+                            color: $dark_grey;
+                            padding: 0px 10px;
+                            &.active {
+                                color: $main_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// header結束
+
+// 首頁index開始
+.news {
+    max-width: 1200px;
+    margin: 40px auto 0px;
+    overflow: hidden;
+    .news_title {
+        border-bottom: 1px solid;
+        border-image: linear-gradient(to right, $main_color, $transparent) 30 30;
+        padding-bottom: 5px;
+        margin: 0px auto 8px;
+        display: flex;
+        justify-content: space-between;
+        h4 {
+            color: $main_color;
+        }
+        a{
+            color: $red;
+            &:hover{
+                color: darken($red , 10%);
+            }
+        }
+    }
+    .news_content {
+        display: flex;
+        height: 200px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .news_item {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px auto;
+            padding: 0 8px;
+            a {
+                width: calc(95% - 100px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                &:hover{
+                    color: darken($dark_grey, 10%);
+                    font-weight: bold;
+                }
+            }
+            &.important_information {
+                border-bottom: 1px solid $main_color;
+                a {
+                    color: $main_color;
+                }
+                &:hover{
+                    color: darken($main_color, 10%);
+                }
+            }
+        }
+    }
+}
