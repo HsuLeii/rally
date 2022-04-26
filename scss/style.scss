@@ -1,7 +1,11 @@
 $main_color: #b284f6;
 $dark_grey: #2e3233;
+$light_grey:#c6c6c6;
 $red:#ff0000;
+$white:#fff;
 $transparent: transparent;
+$body_bg:#f4f8fb;
+$footer_bg:#242529;
 
 body,
 div,
@@ -35,42 +39,42 @@ figure {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 25px;
     line-height: 1.7;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 21px;
     line-height: 1.7;
 }
 
 h4 {
-    font-size: 22px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
 p {
-    font-size: 17px;
+    font-size: 13px;
     line-height: 1.7;
     color: $dark_grey;
 }
 
 span {
-    font-size: 17px;
+    font-size: 13px;
     text-decoration: none;
     line-height: 1.7;
     color: $dark_grey;
 }
 
 a {
-    font-size: 17px;
+    font-size: 13px;
     text-decoration: none;
     line-height: 1.7;
     color: $dark_grey;
 }
 
 label {
-    font-size: 21px;
+    font-size: 14px;
     line-height: 1.7;
 }
 
@@ -101,24 +105,59 @@ body {
     box-sizing: border-box;
 }
 
+body {
+    background-color: $body_bg;
+}
+
 // header開始
 header {
+    background-color: $white;
+
     nav {
         .container-fluid {
-            padding: 0px 5%;
+
             .navbar-brand {
-                img {
-                    height: 50px;
+                width: 70%;
+            }
+
+            .navbar-toggler {
+                border: 1px solid $main_color;
+
+                .icon-bar {
+                    display: block;
+                    width: 22px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: $main_color;
+
+                    &+.icon-bar {
+                        margin-top: 4px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $main_color;
+
+                    .icon-bar {
+                        background-color: $white;
+                    }
                 }
             }
+
+
+
             .navbar-collapse {
                 justify-content: center;
+
                 ul {
                     li {
                         .nav-link {
                             color: $dark_grey;
-                            padding: 0px 10px;
-                            &.active {
+                            padding: 5px 10px;
+                            font-size: 18px;
+
+                            &.active,
+                            &:hover {
                                 color: $main_color;
                             }
                         }
@@ -128,13 +167,14 @@ header {
         }
     }
 }
+
 // header結束
 
 // 首頁index開始
 .news {
     max-width: 1200px;
-    margin: 40px auto 0px;
-    overflow: hidden;
+    margin: 30px auto 0px;
+
     .news_title {
         border-bottom: 1px solid;
         border-image: linear-gradient(to right, $main_color, $transparent) 30 30;
@@ -142,45 +182,538 @@ header {
         margin: 0px auto 8px;
         display: flex;
         justify-content: space-between;
+
         h4 {
             color: $main_color;
         }
-        a{
+
+        a {
             color: $red;
-            &:hover{
-                color: darken($red , 10%);
+
+            &:hover {
+                color: darken($red, 10%);
             }
         }
     }
+
     .news_content {
         display: flex;
-        height: 200px;
         flex-wrap: wrap;
-        flex-direction: column;
+
         .news_item {
             display: flex;
             justify-content: space-between;
             margin: 8px auto;
             padding: 0 8px;
-            a {
-                width: calc(95% - 100px);
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                &:hover{
-                    color: darken($dark_grey, 10%);
-                    font-weight: bold;
+
+            &:nth-child(n+15) {
+                display: none;
+            }
+
+            .news_item_title {
+                display: flex;
+                width: calc(100% - 80px);
+
+                img {
+                    width: 13px;
+
+                    &~a {
+                        margin-left: 5px;
+                    }
+                }
+
+                a {
+                    width: calc(100% - 18px);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-left: 18px;
+
+                    &:hover {
+                        color: darken($dark_grey, 10%);
+                        font-weight: bold;
+                    }
                 }
             }
+
             &.important_information {
-                border-bottom: 1px solid $main_color;
-                a {
-                    color: $main_color;
-                }
-                &:hover{
-                    color: darken($main_color, 10%);
+                .news_item_title {
+                    a {
+                        color: $main_color;
+                        border-bottom: 1px solid $main_color;
+                    }
+
+                    &:hover {
+                        color: darken($main_color, 10%);
+                    }
                 }
             }
         }
+    }
+}
+
+// 首頁index結束
+
+// 競賽辦法competition開始
+.competition_area {
+
+    .competition_menu {
+        margin: 0px auto 15px;
+        padding: 30px 8.33333% 15px;
+        background-color: $body_bg;
+        vertical-align: top;
+        display: block;
+        position: sticky;
+        top: 0;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                padding: 0px 10px;
+                border: 1px solid $main_color;
+                border-radius: 10px;
+                margin: 5px;
+
+                a {
+                    color: $main_color;
+                }
+
+                &:hover,
+                &.active {
+                    background-color: $main_color;
+
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .competition_content {
+        margin: 0 auto;
+        padding: 0 10px;
+        display: block;
+
+        h3{
+            margin-bottom: 10px;
+        }
+
+        .table-responsive{
+            table{
+                overflow: hidden;
+                display: table;
+                width: 90%;
+                thead{
+                    background-color: $light_grey;
+                }
+                tbody{
+                    overflow: hidden;
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+// 競賽辦法competition結束
+
+// footer開始
+footer {
+    padding: 50px 0px 30px;
+    margin-top: 80px;
+    background-color: $footer_bg;
+
+    .footer_area {
+        margin: 0 auto;
+
+        .footer_information {
+            display: flex;
+            flex-direction: column;
+
+            .footer_information_logo {
+                img {
+                    max-width: 250px;
+                }
+            }
+
+            .footer_information_connection {
+                display: flex;
+                flex-direction: column;
+                margin: 15px 0px;
+
+                .connection_mail,
+                .connection_map {
+                    flex-basis: 100%;
+
+                    p {
+                        display: flex;
+                        color: $white;
+                        margin: 5px 0;
+
+                        span {
+                            color: $white;
+
+                            img {
+                                width: 20px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .other_logo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 15px auto 20px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                color: $white;
+                margin: 15px 0px;
+
+                p {
+                    color: $white;
+                }
+
+                img {
+                    margin: 15px 0px 0px;
+                    max-width: 250px;
+                }
+            }
+        }
+
+        .footer_copyright {
+            p {
+                color: $white;
+                text-align: left;
+            }
+        }
+    }
+}
+
+// footer結束
+
+@media screen and (min-width: 576px) {
+
+    // footer開始
+    footer {
+
+        .footer_area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .other_logo {
+                margin: 0px 0px 20px;
+            }
+        }
+    }
+
+    // footer結束
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    span {
+        font-size: 15px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    // header開始
+    header {
+        nav {
+            .container-fluid {
+
+                .navbar-brand {
+                    width: 45%;
+                }
+            }
+        }
+    }
+
+    // header結束
+
+    // 競賽辦法competition開始
+    .competition_area {
+        margin: 0 auto;
+
+        .competition_menu {
+            margin: 0px 0px 15px;
+            padding: 30px 0% 15px;
+            display: inline-block;
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    border: 0px;
+                    border-radius: 0px;
+                    margin: 5px;
+                    padding: 0;
+
+                    a {
+                        color: $dark_grey;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-right: 8px solid $transparent;
+                            border-left: 8px solid $main_color;
+                            border-top: 6px solid $transparent;
+                            border-bottom: 6px solid $transparent;
+                            position: absolute;
+                            top: 50%;
+                            right: 0%;
+                            transform: translate(calc(100% + 5px), -50%);
+                            display: none;
+                        }
+
+                    }
+
+
+                    &:hover,
+                    &.active {
+                        background-color: $transparent;
+
+                        a {
+                            color: $main_color;
+
+                            &::before {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .competition_content {
+            display: inline-block;
+            h3{
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            margin: 30px 0px 15px;
+            max-width: 1200px;
+        }
+    }
+
+    // 競賽辦法competition結束
+
+    // footer開始
+    footer {
+        .footer_area {
+            .footer_information {
+                .footer_information_logo {
+                    img {
+                        max-width: none;
+                    }
+                }
+            }
+
+            .other_logo {
+                div {
+                    img {
+                        max-width: none;
+                    }
+                }
+
+            }
+        }
+    }
+
+    // footer結束
+
+
+}
+
+@media screen and (min-width: 992px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+
+    // header開始
+    header {
+        nav {
+            .container-fluid {
+
+                .navbar-brand {
+                    width: auto;
+                    height: 50px;
+                }
+
+                .navbar-collapse {
+                    ul {
+                        li {
+                            .nav-link {
+                                font-size: 20px;
+                                padding: 0px 8px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    // header結束
+
+    // footer開始
+    footer {
+
+        .footer_area {
+            .footer_information {
+                flex-direction: row;
+
+                .footer_information_logo {
+                    padding: 0 15px;
+
+                    img {
+                        width: auto;
+                        max-height: 100px;
+                        max-width: 100%;
+                    }
+                }
+
+                .footer_information_connection {
+                    flex-direction: row;
+                    padding: 0 15px;
+                    margin: 0px 0px 15px;
+
+                    .connection_mail,
+                    .connection_map {
+                        flex-basis: 50%;
+                    }
+                }
+
+            }
+
+            .other_logo {
+                margin: 30px 0px 50px;
+
+                div {
+                    padding: 0 15px;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+
+                    p {
+                        width: 100%;
+                    }
+
+                    img {
+                        width: 90%;
+                        margin: 10px 5% 0px 0px;
+                    }
+
+                    &:nth-child(1) {
+                        img {
+                            width: 45%;
+                        }
+                    }
+                }
+
+
+            }
+
+            .footer_copyright {
+                padding: 0 15px;
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    // footer結束
+}
+
+@media screen and (min-width: 1200px) {}
+
+
+@media screen and (min-width: 1400px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    span {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    label {
+        font-size: 21px;
     }
 }
