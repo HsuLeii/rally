@@ -1,6 +1,7 @@
 $main_color: #b284f6;
 $dark_grey: #2e3233;
-$light_grey:#c6c6c6;
+$light_grey:#f9f9f9;
+$middle_grey:#c6c6c6;
 $red:#ff0000;
 $white:#fff;
 $transparent: transparent;
@@ -59,7 +60,8 @@ p {
     color: $dark_grey;
 }
 
-span {
+span,
+th,td {
     font-size: 13px;
     text-decoration: none;
     line-height: 1.7;
@@ -73,6 +75,7 @@ a {
     color: $dark_grey;
 }
 
+input,
 label {
     font-size: 14px;
     line-height: 1.7;
@@ -107,6 +110,10 @@ body {
 
 body {
     background-color: $body_bg;
+}
+
+.main_color{
+    color: $main_color !important;
 }
 
 // header開始
@@ -192,6 +199,7 @@ header {
 
             &:hover {
                 color: darken($red, 10%);
+                text-decoration: underline;
             }
         }
     }
@@ -256,15 +264,17 @@ header {
 
 // 競賽辦法competition開始
 .competition_area {
+    max-width: 1500px;
 
     .competition_menu {
         margin: 0px auto 15px;
         padding: 30px 8.33333% 15px;
         background-color: $body_bg;
-        vertical-align: top;
+        float: left;
         display: block;
         position: sticky;
         top: 0;
+        z-index: 2;
 
         ul {
             display: flex;
@@ -301,27 +311,237 @@ header {
             margin-bottom: 10px;
         }
 
-        .table-responsive{
-            table{
-                overflow: hidden;
-                display: table;
-                width: 90%;
-                thead{
-                    background-color: $light_grey;
-                }
-                tbody{
-                    overflow: hidden;
-                    tr{
-                        td{
-                            white-space: nowrap;
-                        }
+        p{
+            span{
+                color: $red;
+                a{
+                    color: $red;
+                    &:hover{
+                        color: darken($red, 10%);
+                        text-decoration: underline;
                     }
                 }
             }
         }
-        
+
+        .table-responsive{
+            margin: 20px auto 40px;
+            table{
+                overflow: hidden;
+                display: table;
+                border-collapse: collapse;
+                min-width: 1140px;
+                overflow: hidden;
+                thead{
+                    background-color: $light_grey;
+                    text-align: center;
+                    tr{
+                        th{
+                            border: 1px solid $middle_grey;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            vertical-align: middle;
+                            a{
+                                color: $main_color;
+
+                                &:hover{
+                                    color: darken($main_color, 10%);
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                // 活動辦法及規則表格開始
+                &.table_competition_activities{
+                    tbody{
+                        tr{
+                            &:nth-child(1)>td:nth-child(1){
+                                width: 20%;
+                            }
+                            &:nth-child(1)>td:nth-child(2){
+                                width: 30%;
+                            }
+                            &:nth-child(1)>td:nth-child(3){
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+                // 活動辦法及規則表格結束
+
+                // 參賽資訊第一個表格開始
+                &.table_competition_information_one{
+                    tbody{
+                        tr{
+                            &:nth-child(1)>td:nth-child(1),
+                            &:nth-child(1)>td:nth-child(2){
+                                width: 10%;
+                            }
+                            &:nth-child(1)>td:nth-child(3),
+                            &:nth-child(1)>td:nth-child(4),
+                            &:nth-child(1)>td:nth-child(5){
+                                width: calc(80% / 3);
+                            }
+                        }
+                    }
+                }
+                // 參賽資訊第一個表格結束
+                // 參賽資訊第二個表格開始
+                &.table_competition_information_two{
+                    tbody{
+                        tr{
+                            &:nth-child(1)>td:nth-child(1){
+                                width: 10%;
+                            }
+                            &:nth-child(1)>td:nth-child(2),
+                            &:nth-child(1)>td:nth-child(3){
+                                width: calc(90% / 2);
+                            }
+                        }
+                    }
+                }
+                // 參賽資訊第二個表格結束
+                // 獎項說明表格開始
+                &.table_competition_award{
+                    tbody{
+                        tr{
+                            &:nth-child(1)>td:nth-child(1),
+                            &:nth-child(1)>td:nth-child(4){
+                                width: 10%;
+                            }
+                            &:nth-child(1)>td:nth-child(2),
+                            &:nth-child(1)>td:nth-child(3){
+                                width: calc(80% / 2);
+                            }
+                        }
+                    }
+                }
+                // 獎項說明表格結束
+            }
+            table, th, td {
+                border: 1px solid $middle_grey;
+                border-collapse: collapse;
+              }
+        }
+
+        .input_area{
+            border: 1px solid $main_color;
+            padding: 5px 15px;
+            box-shadow:inset 0 1px 1px rgba(178,132,246,0.075);
+            background-color: $white;
+            margin: 40px auto;
+            .form_logo{
+                margin: 20px auto 30px;
+                width: 100%;
+            }
+            .input-group{
+                align-items: center;
+                margin: 10px auto;
+                .form-control{
+                    &:focus {
+                        border-color: $main_color;
+                        box-shadow:inset 0 1px 1px rgba(178,132,246,0.075);
+                    }
+                }
+                label{
+                    width: 100%;
+                    margin: 5px 0px;
+                    font-size: 14px;
+                    color: $dark_grey;
+                    &.input-group-text{
+                        color: $main_color;
+                        background-color: $light_grey;
+                        width: auto;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: darken($light_grey, 10%);
+                        }
+                    }
+                    span{
+                        color: $red;
+                    }
+                    input{
+                        display: none;
+                    }
+                }
+                input{
+                    width: 100%;
+                    font-size: 14px;
+                    color: $dark_grey;
+                }
+                .form-control[readonly]{
+                    background-color: $white;
+                }
+                &.input-group-myfile{
+                    width: 100%;
+                    display: flex;
+                    input{
+                        width: 75%;
+                        color: $dark_grey;
+                    }
+                }
+            }
+    
+            .multiple_input{
+                margin: 40px auto;
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                border: 1px solid $middle_grey;
+                background-color: $light_grey;
+                .multiple_input_area{
+                    width: 100%;
+                    padding: 10px;
+                    background-color: $white;
+                    border-top: 1px solid $middle_grey;
+                }
+                p{
+                    width: 100%;
+                    padding: 10px;
+                }
+    
+                .input-group{
+                    width: 100%;
+                }
+            }
+        }
+
+        .privacy{
+            a{
+                color: $main_color;
+                &:hover{
+                    color: darken($main_color, 10%);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .btn_submit{
+            margin: 25px auto;
+            background-color: $main_color;
+            width: 25%;
+            border-radius: 10px;
+            .btn{
+                font-size: 14px;
+                color: $white;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+
     }
 }
+
+input[type=file]::file-selector-button {
+    display: none;
+  }
+  
 
 // 競賽辦法competition結束
 
@@ -410,6 +630,13 @@ footer {
 
 @media screen and (min-width: 576px) {
 
+    // 我要報名signup開始
+.modal-dialog{
+    width: 90%;
+    max-width: none;
+}
+// 我要報名signup結束
+
     // footer開始
     footer {
 
@@ -444,7 +671,8 @@ footer {
         font-size: 15px;
     }
 
-    span {
+    span,
+    th,td {
         font-size: 15px;
     }
 
@@ -452,6 +680,7 @@ footer {
         font-size: 15px;
     }
 
+    input,
     label {
         font-size: 15px;
     }
@@ -528,12 +757,44 @@ footer {
 
         .competition_content {
             display: inline-block;
+            margin: 30px 0px 15px;
+
             h3{
                 text-align: center;
                 margin-bottom: 40px;
             }
-            margin: 30px 0px 15px;
-            max-width: 1200px;
+
+            .input_area{
+                .input-group{
+                    margin: 15px auto;
+                    label{
+                        width: 20%;
+                        font-size: 15px;
+                        &.input-group-text{
+                            color: $main_color;
+                            background-color: $light_grey;
+                            width: auto;
+                            cursor: pointer;
+                        }
+                    }
+                    input{
+                        width: 65%;
+                        font-size: 15px;
+                    }
+                    &.input-group-myfile{
+                        input{
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+    
+            .btn_submit{
+                .btn{
+                    font-size: 15px;
+                }
+            }
+            
         }
     }
 
@@ -580,6 +841,20 @@ footer {
         font-size: 18px;
     }
 
+    p {
+        font-size: 17px;
+    }
+
+    span,
+    th,td {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    input,
     label {
         font-size: 17px;
     }
@@ -611,6 +886,33 @@ footer {
     }
 
     // header結束
+
+        // 競賽辦法competition開始
+        .competition_area {
+
+            .competition_content {
+                .input_area{
+                    .form_logo{
+                        width: 80%;
+                    }
+                    .input-group{
+                        label{
+                            font-size: 17px;
+                        }
+                        input{
+                            font-size: 17px;
+                        }
+                    }
+                }
+        
+                .btn_submit{
+                    .btn{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        // 競賽辦法competition結束
 
     // footer開始
     footer {
@@ -702,18 +1004,75 @@ footer {
     }
 
     p {
-        font-size: 17px;
+        font-size: 19px;
     }
 
-    span {
-        font-size: 17px;
+    span,
+    th,td {
+        font-size: 19px;
     }
 
     a {
-        font-size: 17px;
+        font-size: 19px;
     }
 
+    input,
     label {
-        font-size: 21px;
+        font-size: 19px;
     }
+
+            // 競賽辦法competition開始
+        .competition_area {
+
+            .competition_content {
+                .input_area{
+
+                    padding: 20px 40px;
+                    .input-group{
+                        justify-content: space-between;
+                        label{
+                            width: 20%;
+                            font-size: 21px;
+                            text-align: center;
+                        }
+                        input{
+                            font-size: 21px;
+                            width: 80%;
+                        }
+                    }
+    
+                    .multiple_input{
+                        justify-content: space-between;
+                        align-items: center;
+                        p{
+                            width: 20%;
+                            text-align: center;
+                        }
+                        .multiple_input_area{
+                            width: 80%;
+                            border-top: 0px solid $middle_grey;
+                            border-left: 1px solid $middle_grey;
+    
+                            .input-group{
+                                width: 100%;
+                                label{
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .privacy{
+                        text-align: center;
+                }
+        
+                .btn_submit{
+                    .btn{
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+        // 競賽辦法competition結束
+
 }
