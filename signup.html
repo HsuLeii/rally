@@ -120,12 +120,11 @@
                             <div class="input-group input-group-myfile">
                                 <label for="myfile"><span>*</span>身分證件</label>
                                 <input accept=".pdf,.jpg,.jpeg,.png" type="file" class="form-control"
-                                id="file" onchange="IDFile()">
+                                id="inputGroupMemberAID" onchange="IDFile();readURL(this);" >
                                 <label class="input-group-text" for="inputGroupMemberAID">瀏覽...</label>
                                 <div class="format">
                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
                                 </div>
-                                <img src="" alt="">
                             </div>
                         </div>
                     </div>
@@ -153,6 +152,9 @@
                                 <input accept=".pdf,.jpg,.jpeg,.png" type="file" class="form-control"
                                     id="inputGroupMemberBID">
                                 <label class="input-group-text" for="inputGroupMemberBID">瀏覽...</label>
+                                <div class="format">
+                                    <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -180,6 +182,9 @@
                                 <input accept=".pdf,.jpg,.jpeg,.png" type="file" class="form-control"
                                     id="inputGroupMemberCID">
                                 <label class="input-group-text" for="inputGroupMemberCID">瀏覽...</label>
+                                <div class="format">
+                                    <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,14 +193,14 @@
                 <p class="privacy"><span>*</span>點擊「送出」即表示您同意《科普閱讀拉力賽：試辦賽》的<a href="">《隱私權保護政策》</a></p>
                 <div class="btn_submit">
                     <input class="btn registrationFormBtn" type="submit" data-bs-toggle="modal"
-                        data-bs-target="#registrationFormModal" value="送出">
+                        data-bs-target="#modalRegistrationForm" value="送出">
                 </div>
 
-                <button type="button" class="btn btn-primary">Save changes</button>
+                
 
-                <!-- Modal#modal-enterName start -->
-                <div class="modal fade" id="registrationFormModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <!-- Modal#modalRegistrationForm 報名表確認 start -->
+                
+                <div class="modal fade modalRegistrationForm" id="modalRegistrationForm" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -219,25 +224,26 @@
                                         </p>
                                         <div class="multiple_input_area">
                                             <div class="input-group">
-                                                <label for="inputGroupMemberAName"><span>*</span>姓名</label>
+                                                <label for="inputGroupModalMemberAName"><span>*</span>姓名</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberAName" placeholder="">
+                                                    id="inputGroupModalMemberAName" placeholder="">
                                             </div>
                                             <div class="input-group">
-                                                <label for="inputGroupMemberAPhone"><span>*</span>電話</label>
+                                                <label for="inputGroupModalMemberAPhone"><span>*</span>電話</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberAPhone" placeholder="">
+                                                    id="inputGroupModalMemberAPhone" placeholder="">
                                             </div>
                                             <div class="input-group">
-                                                <label for="inputGroupMemberAMail"><span>*</span>E-mail</label>
+                                                <label for="inputGroupModalMemberAMail"><span>*</span>E-mail</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberAMail  fileName" placeholder="">
+                                                    id="inputGroupModalMemberAMail" placeholder="">
                                             </div>
                                             <div class="input-group input-group-myfile">
                                                 <label for="myfile"><span>*</span>身分證件</label>
-                                                <input readonly type="text" onchange="readURL(this);" class="form-control" id="inputGroupMemberAID">
-                                                <label class="input-group-text" for="inputGroupMemberAID">瀏覽...</label>
-                                                <div class="format">
+                                                <input readonly type="text" class="form-control" id="inputGroupModalMemberAID">
+                                                <button type="button" class="btn check_member_a_image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <p>查看</p> 
+                                                  </button>                                                <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
                                                 </div>
                                             </div>
@@ -248,26 +254,29 @@
                                         <p>組員B</p>
                                         <div class="multiple_input_area">
                                             <div class="input-group">
-                                                <label for="inputGroupMemberBName"><span>*</span>姓名</label>
+                                                <label for="inputGroupModalMemberBName"><span>*</span>姓名</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberBName" placeholder="">
+                                                    id="inputGroupModalMemberBName" placeholder="">
                                             </div>
                                             <div class="input-group">
-                                                <label for="inputGroupMemberBPhone"><span>*</span>電話</label>
+                                                <label for="inputGroupModalMemberBPhone"><span>*</span>電話</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberBPhone" placeholder="">
+                                                    id="inputGroupModalMemberBPhone" placeholder="">
                                             </div>
                                             <div class="input-group">
-                                                <label for="inputGroupMemberBMail"><span>*</span>E-mail</label>
+                                                <label for="inputGroupModalMemberBMail"><span>*</span>E-mail</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberBMail" placeholder="">
+                                                    id="inputGroupModalMemberBMail" placeholder="">
                                             </div>
                                             <div class="input-group input-group-myfile">
                                                 <label for="myfile"><span>*</span>身分證件</label>
                                                 <input readonly accept=".pdf,.jpg,.jpeg,.png" type="file"
-                                                    class="form-control" id="inputGroupMemberBID">
-                                                <label class="input-group-text" for="inputGroupMemberBID">瀏覽...</label>
-                                            </div>
+                                                    class="form-control" id="inputGroupModalMemberBID">
+                                                    <button type="button" class="btn check_member_a_image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        <p>查看</p> 
+                                                      </button>                                                <div class="format">
+                                                        <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                                    </div>
                                         </div>
                                     </div>
 
@@ -275,39 +284,59 @@
                                         <p>組員C</p>
                                         <div class="multiple_input_area">
                                             <div class="input-group">
-                                                <label for="inputGroupMemberCName"><span>*</span>姓名</label>
+                                                <label for="inputGroupModalMemberCName"><span>*</span>姓名</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberCName" placeholder="">
+                                                    id="inputGroupModalMemberCName" placeholder="">
                                             </div>
                                             <div class="input-group">
-                                                <label for="inputGroupMemberCPhone"><span>*</span>電話</label>
+                                                <label for="inputGroupModalMemberCPhone"><span>*</span>電話</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberCPhone" placeholder="">
+                                                    id="inputGroupModalMemberCPhone" placeholder="">
                                             </div>
                                             <div class="input-group">
-                                                <label for="inputGroupMemberCMail"><span>*</span>E-mail</label>
+                                                <label for="inputGroupModalMemberCMail"><span>*</span>E-mail</label>
                                                 <input readonly type="text" class="form-control"
-                                                    id="inputGroupMemberCMail" placeholder="">
+                                                    id="inputGroupModalMemberCMail" placeholder="">
                                             </div>
                                             <div class="input-group input-group-myfile">
                                                 <label for="myfile"><span>*</span>身分證件</label>
                                                 <input readonly accept=".pdf,.jpg,.jpeg,.png" type="file"
-                                                    class="form-control" id="inputGroupMemberCID">
-                                                <label class="input-group-text" for="inputGroupMemberCID">瀏覽...</label>
-                                            </div>
+                                                    class="form-control" id="inputGroupModalMemberCID">
+                                                    <button type="button" class="btn check_member_a_image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        <p>查看</p> 
+                                                      </button>                                                <div class="format">
+                                                        <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                                    </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <p class="privacy"><span>*</span>點擊「送出」即表示您同意《科普閱讀拉力賽：試辦賽》的<a href="">《隱私權保護政策》</a></p>
+                <div class="btn_submit">
+                    <input class="btn registrationFormBtn" type="submit" data-bs-toggle="modal"
+                        data-bs-target="#modalRegistrationForm" value="確認送出">
+                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Modal#modal-enterName end -->
+                <!-- Modal#modalRegistrationForm 報名表確認 end -->
 
+                <!-- Modal#modalViewImage 查看圖像 start -->
+                <div class="modal fade" id="exampleModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="" alt="" class="member_a_image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Modal#modalViewImage 查看圖像 end -->
 
             </div>
         </div>
@@ -358,9 +387,6 @@
     </footer>
     <!-- ------- ------- ------- ------- ------- ------- ------- -->
 
-    <input type="file" id="file" onchange="IDFile()">
-<input type="text" disabled="disable" value="檔名" id="fileName">
-
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap-5.1.1.min.js"></script>
 
@@ -382,30 +408,37 @@
 
             //改變modal表單的值
             const modalName = formGroupModal.elements.inputGroupName.value = name;
-            const modalMemberAName = formGroupModal.elements.inputGroupMemberAName.value = MemberAName;
-            const modalMemberAPhone = formGroupModal.elements.inputGroupMemberAPhone.value = MemberAPhone;
-            const modalMemberAMail = formGroupModal.elements.inputGroupMemberAMail.value = MemberAMail;
+            const modalMemberAName = formGroupModal.elements.inputGroupModalMemberAName.value = MemberAName;
+            const modalMemberAPhone = formGroupModal.elements.inputGroupModalMemberAPhone.value = MemberAPhone;
+            const modalMemberAMail = formGroupModal.elements.inputGroupModalMemberAMail.value = MemberAMail;
         }
 
 
-        // function readURL(input) {
-        //     if (input.files && input.files[0]) {
-        //         var reader = new FileReader();
-        //         reader.readAsDataURL(input.files[0]);
-        //         reader.onload = function (e) {
-        //             $("button").click(function () {
-        //                 $("img").attr('src',e.target.result);
-        //             });
-        //         };
-        //     }
-        // }
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.readAsDataURL(input.files[0]);
+                reader.onload = function (e) {
+                    $(".check_member_a_image").click(function () {
+                        $(".member_a_image").attr('src',e.target.result);
+                    });
+                };
+            }
+        }
 
-        var file = document.getElementById("file");
-var fileName = document.getElementById("fileName");
+        var file = document.getElementById("inputGroupMemberAID");
+var fileName = document.getElementById("inputGroupModalMemberAID");
+
 function IDFile(){
         fileName.value = file.value;
+        alert(file.value)
+        var attr=$("#inputGroupModalMemberAID").attr("file.value");
 }
+
+
     </script>
+
+
 
 
 

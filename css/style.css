@@ -51,7 +51,8 @@ p {
 }
 
 span,
-th, td {
+th,
+td {
   font-size: 13px;
   text-decoration: none;
   line-height: 1.7;
@@ -104,6 +105,28 @@ body {
 
 .main_color {
   color: #b284f6 !important;
+}
+
+.btn-close:focus {
+  -webkit-box-shadow: inset 0 0 0.08rem rgba(178, 132, 246, 0.75);
+          box-shadow: inset 0 0 0.08rem rgba(178, 132, 246, 0.75);
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.btn:focus {
+  -webkit-box-shadow: inset 0 0 0.08rem rgba(178, 132, 246, 0.75);
+          box-shadow: inset 0 0 0.08rem rgba(178, 132, 246, 0.75);
+}
+
+.btn:hover {
+  background-color: #9454f3;
+}
+
+.modal-footer {
+  width: 100%;
 }
 
 header {
@@ -389,7 +412,9 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
   width: calc(80% / 2);
 }
 
-.competition_area .competition_content .table-responsive table, .competition_area .competition_content .table-responsive th, .competition_area .competition_content .table-responsive td {
+.competition_area .competition_content .table-responsive table,
+.competition_area .competition_content .table-responsive th,
+.competition_area .competition_content .table-responsive td {
   border: 1px solid #c6c6c6;
   border-collapse: collapse;
 }
@@ -413,6 +438,10 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
       -ms-flex-align: center;
           align-items: center;
   margin: 10px auto;
+}
+
+.competition_area .competition_content .input_area .input-group .form-control {
+  border: 1px solid #c6c6c6;
 }
 
 .competition_area .competition_content .input_area .input-group .form-control:focus {
@@ -499,6 +528,14 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
   width: 100%;
 }
 
+.competition_area .competition_content .input_area .multiple_input .input-group .format span {
+  font-size: 12px;
+}
+
+.competition_area .competition_content .privacy {
+  width: 100% !important;
+}
+
 .competition_area .competition_content .privacy a {
   color: #b284f6;
 }
@@ -524,6 +561,53 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
 
 input[type=file]::file-selector-button {
   display: none;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-header {
+  border-bottom: 0px;
+  padding: 1rem 1rem 0px;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body {
+  padding: 0px 1rem;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body .input_area {
+  margin: 0 auto;
+  border: 0;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body .input_area .input-group .form-control {
+  border: 0px;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body .input_area .input-group .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #c6c6c6;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body .input_area .input-group .check_member_a_image {
+  border: 1px solid #c6c6c6;
+  margin-top: -1px;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body .input_area .input-group .check_member_a_image:hover {
+  background-color: #b284f6;
+  border: 1px solid #b284f6;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body .input_area .input-group .check_member_a_image:hover p {
+  color: #fff;
+}
+
+.modalRegistrationForm .modal-dialog .modal-content .modal-body .input_area .input-group .check_member_a_image p {
+  width: auto;
+  padding: 0;
+  line-height: inherit;
+  color: #b284f6;
 }
 
 footer {
@@ -632,7 +716,7 @@ footer .footer_area .footer_copyright p {
 }
 
 @media screen and (min-width: 576px) {
-  .modal-dialog {
+  .modalRegistrationForm .modal-dialog {
     width: 90%;
     max-width: none;
   }
@@ -665,7 +749,8 @@ footer .footer_area .footer_copyright p {
     font-size: 15px;
   }
   span,
-  th, td {
+  th,
+  td {
     font-size: 15px;
   }
   a {
@@ -752,7 +837,11 @@ footer .footer_area .footer_copyright p {
     font-size: 15px;
   }
   .competition_area .competition_content .input_area .input-group.input-group-myfile input {
-    width: 60%;
+    width: 50%;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group .format {
+    width: auto;
+    margin-left: 20%;
   }
   .competition_area .competition_content .btn_submit .btn {
     font-size: 15px;
@@ -779,7 +868,8 @@ footer .footer_area .footer_copyright p {
     font-size: 17px;
   }
   span,
-  th, td {
+  th,
+  td {
     font-size: 17px;
   }
   a {
@@ -799,12 +889,16 @@ footer .footer_area .footer_copyright p {
   }
   .competition_area .competition_content .input_area .form_logo {
     width: 80%;
+    max-width: 600px;
   }
   .competition_area .competition_content .input_area .input-group label {
     font-size: 17px;
   }
   .competition_area .competition_content .input_area .input-group input {
     font-size: 17px;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group .format span {
+    font-size: 15px;
   }
   .competition_area .competition_content .btn_submit .btn {
     font-size: 17px;
@@ -886,7 +980,8 @@ footer .footer_area .footer_copyright p {
     font-size: 19px;
   }
   span,
-  th, td {
+  th,
+  td {
     font-size: 19px;
   }
   a {
@@ -906,11 +1001,11 @@ footer .footer_area .footer_copyright p {
   }
   .competition_area .competition_content .input_area .input-group label {
     width: 20%;
-    font-size: 21px;
+    font-size: 19px;
     text-align: center;
   }
   .competition_area .competition_content .input_area .input-group input {
-    font-size: 21px;
+    font-size: 19px;
     width: 80%;
   }
   .competition_area .competition_content .input_area .multiple_input {
@@ -941,6 +1036,53 @@ footer .footer_area .footer_copyright p {
   }
   .competition_area .competition_content .btn_submit .btn {
     font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .competition_area .competition_content .input_area .input-group label {
+    width: 15%;
+  }
+  .competition_area .competition_content .input_area .input-group input {
+    width: 85%;
+  }
+  .competition_area .competition_content .input_area .input-group.input-group-myfile input {
+    width: 30%;
+  }
+  .competition_area .competition_content .input_area .multiple_input p {
+    width: 15%;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 85%;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group {
+    width: 48%;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group label {
+    width: 30%;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group input {
+    width: 35%;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group .format {
+    margin-left: 30%;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group.input-group-myfile label.input-group-text {
+    width: auto;
+  }
+  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group.input-group-myfile input {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */
