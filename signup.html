@@ -196,7 +196,25 @@
                         data-bs-target="#modalRegistrationForm" value="送出">
                 </div>
 
-                
+                 <!-- Modal#modalViewImage 查看圖像 start -->
+                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="" alt="" class="member_a_image">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Modal#modalViewImage 查看圖像 end -->
 
                 <!-- Modal#modalRegistrationForm 報名表確認 start -->
                 
@@ -241,9 +259,9 @@
                                             <div class="input-group input-group-myfile">
                                                 <label for="myfile"><span>*</span>身分證件</label>
                                                 <input readonly type="text" class="form-control" id="inputGroupModalMemberAID">
-                                                <button type="button" class="btn check_member_a_image" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <p>查看</p> 
-                                                  </button>                                                <div class="format">
+                                                <button type="button" class="btn check_member_a_image" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                    <p>查看</p>
+                                                  </button>                                              <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
                                                 </div>
                                             </div>
@@ -322,21 +340,8 @@
                     </div>
                 </div>
                 <!-- Modal#modalRegistrationForm 報名表確認 end -->
-
-                <!-- Modal#modalViewImage 查看圖像 start -->
-                <div class="modal fade" id="exampleModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <img src="" alt="" class="member_a_image">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Modal#modalViewImage 查看圖像 end -->
+                                
+               
 
             </div>
         </div>
@@ -431,7 +436,6 @@ var fileName = document.getElementById("inputGroupModalMemberAID");
 
 function IDFile(){
         fileName.value = file.value;
-        alert(file.value)
         var attr=$("#inputGroupModalMemberAID").attr("file.value");
 }
 
