@@ -272,6 +272,7 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
 
 .competition_area {
   max-width: 1500px;
+  margin: 30px auto;
 }
 
 .competition_area .competition_menu {
@@ -460,7 +461,9 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
 .competition_area .competition_content .input_area .input-group label.input-group-text {
   color: #b284f6;
   background-color: #f9f9f9;
-  width: auto;
+  width: 25%;
+  padding: .375rem 0rem;
+  display: block;
   cursor: pointer;
 }
 
@@ -548,7 +551,7 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
 .competition_area .competition_content .btn_submit {
   margin: 25px auto;
   background-color: #b284f6;
-  width: 25%;
+  width: 45%;
   border-radius: 10px;
 }
 
@@ -716,6 +719,13 @@ footer .footer_area .footer_copyright p {
 }
 
 @media screen and (min-width: 576px) {
+  .competition_area .competition_content .input_area .input-group label.input-group-text {
+    width: auto;
+    padding: .375rem .75rem;
+  }
+  .competition_area .competition_content .btn_submit {
+    width: 25%;
+  }
   .modalRegistrationForm .modal-dialog {
     width: 90%;
     max-width: none;
@@ -764,7 +774,7 @@ footer .footer_area .footer_copyright p {
     width: 45%;
   }
   .competition_area {
-    margin: 0 auto;
+    margin: 60px auto;
   }
   .competition_area .competition_menu {
     margin: 0px 0px 15px;
@@ -813,7 +823,7 @@ footer .footer_area .footer_copyright p {
   }
   .competition_area .competition_content {
     display: inline-block;
-    margin: 30px 0px 15px;
+    margin: 0px 0px 15px;
   }
   .competition_area .competition_content h3 {
     text-align: center;
@@ -829,7 +839,6 @@ footer .footer_area .footer_copyright p {
   .competition_area .competition_content .input_area .input-group label.input-group-text {
     color: #b284f6;
     background-color: #f9f9f9;
-    width: auto;
     cursor: pointer;
   }
   .competition_area .competition_content .input_area .input-group input {

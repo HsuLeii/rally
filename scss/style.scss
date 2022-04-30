@@ -287,6 +287,7 @@ header {
 // 競賽辦法competition開始
 .competition_area {
     max-width: 1500px;
+    margin: 30px auto;
 
     .competition_menu {
         margin: 0px auto 15px;
@@ -508,7 +509,9 @@ header {
                     &.input-group-text {
                         color: $main_color;
                         background-color: $light_grey;
-                        width: auto;
+                        width: 25%;
+                        padding: .375rem 0rem;
+                        display: block;
                         cursor: pointer;
 
                         &:hover {
@@ -594,7 +597,7 @@ header {
         .btn_submit {
             margin: 25px auto;
             background-color: $main_color;
-            width: 25%;
+            width: 45%;
             border-radius: 10px;
 
             .btn {
@@ -669,8 +672,6 @@ input[type=file]::file-selector-button {
         }
     }
 }
-
-
 // 我要報名sign up結束
 
 // footer開始
@@ -758,6 +759,31 @@ footer {
 
 @media screen and (min-width: 576px) {
 
+        // 競賽辦法competition開始
+        .competition_area {  
+            .competition_content {
+    
+                .input_area {
+                    .input-group {
+    
+                        label {
+    
+                            &.input-group-text {
+                                width: auto;
+                                padding: .375rem .75rem;
+                                                        }
+                        }
+                    }
+                } 
+                
+                .btn_submit {
+                    width: 25%;
+                }
+            }
+        }
+    
+        // 競賽辦法competition結束
+
     // 我要報名sign up開始
     .modalRegistrationForm {
         .modal-dialog {
@@ -765,7 +791,6 @@ footer {
             max-width: none;
         }
     }
-
     // 我要報名sign up結束
 
     // footer開始
@@ -833,8 +858,7 @@ footer {
 
     // 競賽辦法competition開始
     .competition_area {
-        margin: 0 auto;
-
+        margin: 60px auto;
         .competition_menu {
             margin: 0px 0px 15px;
             padding: 30px 0% 15px;
@@ -889,7 +913,7 @@ footer {
 
         .competition_content {
             display: inline-block;
-            margin: 30px 0px 15px;
+            margin: 0px 0px 15px;
 
             h3 {
                 text-align: center;
@@ -907,7 +931,6 @@ footer {
                         &.input-group-text {
                             color: $main_color;
                             background-color: $light_grey;
-                            width: auto;
                             cursor: pointer;
                         }
                     }
