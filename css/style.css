@@ -458,19 +458,6 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
   color: #2e3233;
 }
 
-.competition_area .competition_content .input_area .input-group label.input-group-text {
-  color: #b284f6;
-  background-color: #f9f9f9;
-  width: 25%;
-  padding: .375rem 0rem;
-  display: block;
-  cursor: pointer;
-}
-
-.competition_area .competition_content .input_area .input-group label.input-group-text:hover {
-  background-color: #e0e0e0;
-}
-
 .competition_area .competition_content .input_area .input-group label span {
   color: #ff0000;
 }
@@ -499,6 +486,31 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
 .competition_area .competition_content .input_area .input-group.input-group-myfile input {
   width: 75%;
   color: #2e3233;
+}
+
+.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file {
+  width: 25%;
+  position: relative;
+}
+
+.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file .input-group-text {
+  color: #b284f6;
+  background-color: #f9f9f9;
+  display: block;
+  cursor: pointer;
+  border-radius: 0px;
+  padding: 0.375rem 0rem;
+}
+
+.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file .input-group-text:hover {
+  background-color: #e0e0e0;
+}
+
+.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .competition_area .competition_content .input_area .multiple_input {
@@ -533,6 +545,12 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
 
 .competition_area .competition_content .input_area .multiple_input .input-group .format span {
   font-size: 12px;
+}
+
+.competition_area .competition_content .input_area .multiple_input .input-group .format img {
+  margin-top: 15px;
+  display: block;
+  max-width: 300px;
 }
 
 .competition_area .competition_content .privacy {
@@ -719,8 +737,10 @@ footer .footer_area .footer_copyright p {
 }
 
 @media screen and (min-width: 576px) {
-  .competition_area .competition_content .input_area .input-group label.input-group-text {
+  .competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file {
     width: auto;
+  }
+  .competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file .input-group-text {
     padding: .375rem .75rem;
   }
   .competition_area .competition_content .btn_submit {
@@ -847,6 +867,9 @@ footer .footer_area .footer_copyright p {
   }
   .competition_area .competition_content .input_area .input-group.input-group-myfile input {
     width: 50%;
+  }
+  .competition_area .competition_content .input_area .input-group.input-group-myfile .input-group-text {
+    width: auto;
   }
   .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group .format {
     width: auto;

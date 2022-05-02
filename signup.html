@@ -119,9 +119,14 @@
                             </div>
                             <div class="input-group input-group-myfile">
                                 <label for="myfile"><span>*</span>身分證件</label>
-                                <input accept=".pdf,.jpg,.jpeg,.png" type="file" class="form-control"
-                                id="inputGroupMemberAID" onchange="IDFile();readURL(this);" >
-                                <label class="input-group-text" for="inputGroupMemberAID">瀏覽...</label>
+                                
+                                <input readonly id="inputGroupMemberAIDShow" class="form-control"
+                                     placeholder="請上傳...">
+                                    <div class="btn-file" tabindex="500">
+                                        <label class="input-group-text" for="inputGroupMemberAID">瀏覽...</label>
+                                        <input id="inputGroupMemberAID" name="file-studentsAccount" type="file" class="fileUpload-file" onchange="IDFile();readURL(this);">
+                                    </div>
+
                                 <div class="format">
                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
                                 </div>
@@ -149,10 +154,12 @@
                             </div>
                             <div class="input-group input-group-myfile">
                                 <label for="myfile"><span>*</span>身分證件</label>
-                                <input accept=".pdf,.jpg,.jpeg,.png" type="file" class="form-control"
-                                    id="inputGroupMemberBID">
-                                <label class="input-group-text" for="inputGroupMemberBID">瀏覽...</label>
-                                <div class="format">
+                                <input readonly accept=".pdf,.jpg,.jpeg,.png" class="form-control"
+                                placeholder="請上傳...">
+                               <div class="btn-file" tabindex="500">
+                                   <label class="input-group-text" for="inputGroupMemberBID">瀏覽...</label>
+                                   <input id="inputGroupMemberBID" name="file-studentsAccount" type="file" class="fileUpload-file">
+                               </div>                                <div class="format">
                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
                                 </div>
                             </div>
@@ -179,9 +186,13 @@
                             </div>
                             <div class="input-group input-group-myfile">
                                 <label for="myfile"><span>*</span>身分證件</label>
-                                <input accept=".pdf,.jpg,.jpeg,.png" type="file" class="form-control"
-                                    id="inputGroupMemberCID">
-                                <label class="input-group-text" for="inputGroupMemberCID">瀏覽...</label>
+                                <input readonly accept=".pdf,.jpg,.jpeg,.png" class="form-control"
+                                     placeholder="請上傳...">
+                                    <div class="btn-file" tabindex="500">
+                                        <label class="input-group-text" for="inputGroupMemberCID">瀏覽...</label>
+                                        <input id="inputGroupMemberCID" name="file-studentsAccount" type="file" class="fileUpload-file">
+                                    </div>
+                                                                   
                                 <div class="format">
                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
                                 </div>
@@ -195,26 +206,6 @@
                     <input class="btn registrationFormBtn" type="submit" data-bs-toggle="modal"
                         data-bs-target="#modalRegistrationForm" value="送出">
                 </div>
-
-                 <!-- Modal#modalViewImage 查看圖像 start -->
-                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <img src="" alt="" class="member_a_image">
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Understood</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Modal#modalViewImage 查看圖像 end -->
 
                 <!-- Modal#modalRegistrationForm 報名表確認 start -->
                 
@@ -259,10 +250,12 @@
                                             <div class="input-group input-group-myfile">
                                                 <label for="myfile"><span>*</span>身分證件</label>
                                                 <input readonly type="text" class="form-control" id="inputGroupModalMemberAID">
-                                                <button type="button" class="btn check_member_a_image" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                <button type="button" class="btn check_member_a_image">
                                                     <p>查看</p>
-                                                  </button>                                              <div class="format">
+                                                  </button>                                             
+                                                   <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                                    <img src="" alt="" class="member_a_image">
                                                 </div>
                                             </div>
                                         </div>
@@ -433,12 +426,13 @@
 
         var file = document.getElementById("inputGroupMemberAID");
 var fileName = document.getElementById("inputGroupModalMemberAID");
+var showFileName = document.getElementById("inputGroupMemberAIDShow");
 
 function IDFile(){
-        fileName.value = file.value;
+    showFileName.value = file.value;
+    fileName.value = file.value;
         var attr=$("#inputGroupModalMemberAID").attr("file.value");
 }
-
 
     </script>
 
