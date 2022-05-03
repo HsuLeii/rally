@@ -82,6 +82,10 @@ label {
     line-height: 1.7;
 }
 
+input[type=file]::file-selector-button {
+    display: none;
+}
+
 img {
     width: 100%;
 }
@@ -184,23 +188,29 @@ header {
 
                 ul {
                     li {
-                        .nav-link {
-                            color: $dark_grey;
-                            padding: 5px 10px;
-                            font-size: 18px;
+                        &.nav-item{
 
                             &.active,
                             &:hover {
                                 color: $main_color;
+                                .nav-link{
+                                        color: $main_color;
+                                    }
+                            }
+
+                            .nav-link {
+                                color: $dark_grey;
+                                padding: 5px 10px;
+                                font-size: 18px;
                             }
                         }
+                        
                     }
                 }
             }
         }
     }
 }
-
 // header結束
 
 // 首頁index開始
@@ -289,13 +299,12 @@ header {
         }
     }
 }
-
 // 首頁index結束
 
 // 競賽辦法competition開始
 .competition_area {
     max-width: 1500px;
-    margin: 30px auto;
+    margin: 0 auto;
 
     .competition_menu {
         margin: 0px auto 15px;
@@ -335,8 +344,9 @@ header {
 
     .competition_content {
         margin: 0 auto;
-        padding: 0 10px;
+        padding: 30px 5%;
         display: block;
+        background-color: $white;
 
         h3 {
             margin-bottom: 10px;
@@ -638,11 +648,6 @@ header {
 
     }
 }
-
-input[type=file]::file-selector-button {
-    display: none;
-}
-
 // 競賽辦法competition結束
 
 // 我要報名sign up開始
@@ -700,9 +705,10 @@ input[type=file]::file-selector-button {
 // 我要報名sign up結束
 
 // 最新消息news開始
-
 .news_area{
-    margin: 30px auto;
+    margin: 0px auto;
+    padding: 30px 5%;
+    background-color: $white;
 
     h3{
         margin-bottom: 10px;
@@ -732,13 +738,46 @@ input[type=file]::file-selector-button {
         }
     }
 }
-
 // 最新消息news結束
+
+// 常見問題problem開始
+.problem_area{
+    margin: 0px auto;
+    padding: 30px 5%;
+    background-color: $white;
+
+    h3{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .problem_content{
+
+        .problem_item{
+            margin-bottom: 20px;
+            .question_area{
+                padding: 20px;
+                background-color: $light_grey;
+                border: 1px solid $middle_grey;
+            }
+            .answer_area{
+                .answer_item{
+                    padding: 20px;
+                    border: 1px solid $middle_grey;
+                    margin-top: -1px;
+                }
+            }
+        }
+        
+        
+    }
+}
+
+// 常見問題problem結束
 
 // footer開始
 footer {
     padding: 50px 0px 30px;
-    margin-top: 80px;
     background-color: $footer_bg;
 
     .footer_area {
@@ -815,7 +854,6 @@ footer {
         }
     }
 }
-
 // footer結束
 
 @media screen and (min-width: 576px) {
@@ -933,11 +971,10 @@ footer {
 
     // 競賽辦法competition開始
     .competition_area {
-        margin: 60px auto;
 
         .competition_menu {
             margin: 0px 0px 15px;
-            padding: 30px 0% 15px;
+            padding: 60px 0% 15px;
             display: inline-block;
 
             ul {
@@ -946,8 +983,8 @@ footer {
                 li {
                     border: 0px;
                     border-radius: 0px;
-                    margin: 5px;
                     padding: 0;
+                    margin: 5px 0px;
 
                     a {
                         color: $dark_grey;
@@ -989,7 +1026,7 @@ footer {
 
         .competition_content {
             display: inline-block;
-            margin: 0px 0px 15px;
+            padding: 60px 5%;
 
             h3 {
                 text-align: center;
@@ -1054,16 +1091,35 @@ footer {
     // 最新消息news開始
 
 .news_area{
-    margin: 60px auto;
+    padding: 60px 5%;
 
     h3{
         margin-bottom: 40px;
-        text-align: center;
     }
 
 }
 
 // 最新消息news結束
+
+// 常見問題problem開始
+.problem_area{
+    padding: 60px 5%;
+
+    h3{
+        margin-bottom: 40px;
+    }
+
+    .problem_content{
+
+        .problem_item{
+            margin-bottom: 45px;
+        }
+        
+        
+    }
+}
+
+// 常見問題problem結束
 
     // footer開始
     footer {
@@ -1324,6 +1380,15 @@ footer {
 
     // 競賽辦法competition開始
     .competition_area {
+        .competition_menu{
+            ul{
+                li{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
 
         .competition_content {
             .input_area {
