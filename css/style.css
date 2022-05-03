@@ -396,6 +396,18 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   width: 50%;
 }
 
+.competition_area .competition_content .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(1) {
+  width: 8%;
+}
+
+.competition_area .competition_content .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(2) {
+  width: 46%;
+}
+
+.competition_area .competition_content .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(3) {
+  width: 46%;
+}
+
 .competition_area .competition_content .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(1),
 .competition_area .competition_content .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(2) {
   width: 10%;
@@ -591,6 +603,106 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   color: #fff;
   width: 100%;
   margin: 0 auto;
+}
+
+.competition_area .competition_content .timeline_area {
+  margin: 60px 0px 0px 12.5px;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item:nth-last-child(1) .timeline_marker:before {
+  display: none;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item:nth-last-child(1) .timeline_marker .timeline_marker_inner::after {
+  display: none;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_content {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-width: 25%;
+  margin-top: -20px;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_content .timeline_content_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0px 0px 60px 35px;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_marker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -20px;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_marker:before {
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  width: 10px;
+  content: '';
+  background: #b284f6;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner {
+  z-index: 1;
+  line-height: 0;
+  position: relative;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  width: 25px;
+  height: 25px;
+  border: 2px solid;
+  background-color: #f4f8fb;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner img {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  width: 50px;
+}
+
+.competition_area .competition_content .timeline_area .timeline_item .timeline_item_meta {
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
 }
 
 .modalRegistrationForm .modal-dialog .modal-content .modal-body {
@@ -945,6 +1057,23 @@ footer .footer_area .footer_copyright p {
   .competition_area .competition_content .btn_submit .btn {
     font-size: 15px;
   }
+  .competition_area .competition_content .timeline_area {
+    margin: 60px 0px 0px 30px;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item .timeline_content .timeline_content_inner {
+    padding: 0px 0px 60px 70px;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item .timeline_marker:before {
+    width: 30px;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner::after {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #2e3233;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner img {
+    width: 100px;
+  }
   .news_area h3 {
     margin-bottom: 40px;
   }
@@ -1170,6 +1299,41 @@ footer .footer_area .footer_copyright p {
   }
   .competition_area .competition_content .btn_submit .btn {
     font-size: 19px;
+  }
+  .competition_area .competition_content .timeline_area {
+    margin: 60px auto;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item:nth-child(2n) .timeline_content .timeline_content_inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0px 0px 60px 70px;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item .timeline_content {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item .timeline_content .timeline_content_inner {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0px 70px 60px 0px;
+  }
+  .competition_area .competition_content .timeline_area .timeline_item .timeline_item_meta {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
