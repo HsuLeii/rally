@@ -171,7 +171,7 @@ header nav .container-fluid .navbar-collapse ul li .nav-item.active, header nav 
   color: #b284f6;
 }
 
-header nav .container-fluid .navbar-collapse ul li .nav-item.active .nav-link a, header nav .container-fluid .navbar-collapse ul li .nav-item:hover .nav-link a {
+header nav .container-fluid .navbar-collapse ul li .nav-item.active .nav-link, header nav .container-fluid .navbar-collapse ul li .nav-item:hover .nav-link {
   color: #b284f6;
 }
 
