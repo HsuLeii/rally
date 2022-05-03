@@ -177,6 +177,10 @@ header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav 
   color: #b284f6;
 }
 
+header nav .container-fluid .navbar-collapse ul li .nav-link.active a, header nav .container-fluid .navbar-collapse ul li .nav-link:hover a {
+  color: #b284f6;
+}
+
 .news {
   max-width: 1200px;
   margin: 30px auto 0px;
