@@ -167,18 +167,18 @@ header nav .container-fluid .navbar-collapse {
           justify-content: center;
 }
 
-header nav .container-fluid .navbar-collapse ul li .nav-link {
+header nav .container-fluid .navbar-collapse ul li .nav-item.active, header nav .container-fluid .navbar-collapse ul li .nav-item:hover {
+  color: #b284f6;
+}
+
+header nav .container-fluid .navbar-collapse ul li .nav-item.active .nav-link a, header nav .container-fluid .navbar-collapse ul li .nav-item:hover .nav-link a {
+  color: #b284f6;
+}
+
+header nav .container-fluid .navbar-collapse ul li .nav-item .nav-link {
   color: #2e3233;
   padding: 5px 10px;
   font-size: 18px;
-}
-
-header nav .container-fluid .navbar-collapse ul li .nav-link.active, header nav .container-fluid .navbar-collapse ul li .nav-link:hover {
-  color: #b284f6;
-}
-
-header nav .container-fluid .navbar-collapse ul li .nav-link.active a, header nav .container-fluid .navbar-collapse ul li .nav-link:hover a {
-  color: #b284f6;
 }
 
 .news {
