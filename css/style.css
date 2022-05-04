@@ -111,6 +111,17 @@ body {
   color: #b284f6 !important;
 }
 
+.link_btn {
+  background-color: #b284f6;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.link_btn:hover {
+  background-color: #9454f3;
+}
+
 .btn-close:focus {
   -webkit-box-shadow: inset 0 0 0.08rem rgba(178, 132, 246, 0.75);
           box-shadow: inset 0 0 0.08rem rgba(178, 132, 246, 0.75);
@@ -282,12 +293,12 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   border-bottom: 3px solid;
 }
 
-.competition_area {
+.horizontal_layout_area {
   max-width: 1500px;
   margin: 0 auto;
 }
 
-.competition_area .competition_menu {
+.horizontal_layout_area .horizontal_layout_left {
   margin: 0px auto 15px;
   padding: 30px 8.33333% 15px;
   background-color: #f4f8fb;
@@ -299,7 +310,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   z-index: 2;
 }
 
-.competition_area .competition_menu ul {
+.horizontal_layout_area .horizontal_layout_left ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,54 +318,54 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
       flex-wrap: wrap;
 }
 
-.competition_area .competition_menu ul li {
+.horizontal_layout_area .horizontal_layout_left ul li {
   padding: 0px 10px;
   border: 1px solid #b284f6;
   border-radius: 10px;
   margin: 5px;
 }
 
-.competition_area .competition_menu ul li a {
+.horizontal_layout_area .horizontal_layout_left ul li a {
   color: #b284f6;
 }
 
-.competition_area .competition_menu ul li:hover, .competition_area .competition_menu ul li.active {
+.horizontal_layout_area .horizontal_layout_left ul li:hover, .horizontal_layout_area .horizontal_layout_left ul li.active {
   background-color: #b284f6;
 }
 
-.competition_area .competition_menu ul li:hover a, .competition_area .competition_menu ul li.active a {
+.horizontal_layout_area .horizontal_layout_left ul li:hover a, .horizontal_layout_area .horizontal_layout_left ul li.active a {
   color: #fff;
 }
 
-.competition_area .competition_content {
+.horizontal_layout_area .horizontal_layout_right {
   margin: 0 auto;
   padding: 30px 5%;
   display: block;
   background-color: #fff;
 }
 
-.competition_area .competition_content h3 {
+.horizontal_layout_area .horizontal_layout_right h3 {
   margin-bottom: 10px;
 }
 
-.competition_area .competition_content p span {
+.horizontal_layout_area .horizontal_layout_right p span {
   color: #ff0000;
 }
 
-.competition_area .competition_content p span a {
+.horizontal_layout_area .horizontal_layout_right p span a {
   color: #ff0000;
 }
 
-.competition_area .competition_content p span a:hover {
+.horizontal_layout_area .horizontal_layout_right p span a:hover {
   color: #cc0000;
   text-decoration: underline;
 }
 
-.competition_area .competition_content .table-responsive {
+.horizontal_layout_area .horizontal_layout_right .table-responsive {
   margin: 20px auto 40px;
 }
 
-.competition_area .competition_content .table-responsive table {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table {
   overflow: hidden;
   display: table;
   border-collapse: collapse;
@@ -362,90 +373,90 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   overflow: hidden;
 }
 
-.competition_area .competition_content .table-responsive table thead {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table thead {
   background-color: #f9f9f9;
   text-align: center;
 }
 
-.competition_area .competition_content .table-responsive table thead tr th {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table thead tr th {
   border: 1px solid #c6c6c6;
 }
 
-.competition_area .competition_content .table-responsive table tbody tr td {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table tbody tr td {
   vertical-align: middle;
 }
 
-.competition_area .competition_content .table-responsive table tbody tr td a {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table tbody tr td a {
   color: #b284f6;
 }
 
-.competition_area .competition_content .table-responsive table tbody tr td a:hover {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table tbody tr td a:hover {
   color: #9454f3;
   text-decoration: underline;
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_activities tbody tr:nth-child(1) > td:nth-child(1) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_activities tbody tr:nth-child(1) > td:nth-child(1) {
   width: 20%;
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_activities tbody tr:nth-child(1) > td:nth-child(2) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_activities tbody tr:nth-child(1) > td:nth-child(2) {
   width: 30%;
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_activities tbody tr:nth-child(1) > td:nth-child(3) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_activities tbody tr:nth-child(1) > td:nth-child(3) {
   width: 50%;
 }
 
-.competition_area .competition_content .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(1) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(1) {
   width: 8%;
 }
 
-.competition_area .competition_content .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(2) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(2) {
   width: 46%;
 }
 
-.competition_area .competition_content .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(3) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_table_schedule tbody tr:nth-child(1) > td:nth-child(3) {
   width: 46%;
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(1),
-.competition_area .competition_content .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(2) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(1),
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(2) {
   width: 10%;
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(3),
-.competition_area .competition_content .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(4),
-.competition_area .competition_content .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(5) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(3),
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(4),
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(5) {
   width: calc(80% / 3);
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(1) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(1) {
   width: 10%;
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(2),
-.competition_area .competition_content .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(3) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(2),
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(3) {
   width: calc(90% / 2);
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(1),
-.competition_area .competition_content .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(4) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(1),
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(4) {
   width: 10%;
 }
 
-.competition_area .competition_content .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(2),
-.competition_area .competition_content .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(3) {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(2),
+.horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(3) {
   width: calc(80% / 2);
 }
 
-.competition_area .competition_content .table-responsive table,
-.competition_area .competition_content .table-responsive th,
-.competition_area .competition_content .table-responsive td {
+.horizontal_layout_area .horizontal_layout_right .table-responsive table,
+.horizontal_layout_area .horizontal_layout_right .table-responsive th,
+.horizontal_layout_area .horizontal_layout_right .table-responsive td {
   border: 1px solid #c6c6c6;
   border-collapse: collapse;
 }
 
-.competition_area .competition_content .input_area {
+.horizontal_layout_area .horizontal_layout_right .input_area {
   border: 1px solid #b284f6;
   padding: 5px 15px;
   -webkit-box-shadow: inset 0 1px 1px rgba(178, 132, 246, 0.075);
@@ -454,71 +465,71 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   margin: 40px auto;
 }
 
-.competition_area .competition_content .input_area .form_logo {
+.horizontal_layout_area .horizontal_layout_right .input_area .form_logo {
   margin: 20px auto 30px;
   width: 100%;
 }
 
-.competition_area .competition_content .input_area .input-group {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 10px auto;
 }
 
-.competition_area .competition_content .input_area .input-group .form-control {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group .form-control {
   border: 1px solid #c6c6c6;
 }
 
-.competition_area .competition_content .input_area .input-group .form-control:focus {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group .form-control:focus {
   border-color: #b284f6;
   -webkit-box-shadow: inset 0 1px 1px rgba(178, 132, 246, 0.075);
           box-shadow: inset 0 1px 1px rgba(178, 132, 246, 0.075);
 }
 
-.competition_area .competition_content .input_area .input-group label {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group label {
   width: 100%;
   margin: 5px 0px;
   font-size: 14px;
   color: #2e3233;
 }
 
-.competition_area .competition_content .input_area .input-group label span {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group label span {
   color: #ff0000;
 }
 
-.competition_area .competition_content .input_area .input-group label input {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group label input {
   display: none;
 }
 
-.competition_area .competition_content .input_area .input-group input {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group input {
   width: 100%;
   font-size: 14px;
   color: #2e3233;
 }
 
-.competition_area .competition_content .input_area .input-group .form-control[readonly] {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group .form-control[readonly] {
   background-color: #fff;
 }
 
-.competition_area .competition_content .input_area .input-group.input-group-myfile {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.competition_area .competition_content .input_area .input-group.input-group-myfile input {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile input {
   width: 75%;
   color: #2e3233;
 }
 
-.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile .btn-file {
   width: 25%;
   position: relative;
 }
 
-.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file .input-group-text {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile .btn-file .input-group-text {
   color: #b284f6;
   background-color: #f9f9f9;
   display: block;
@@ -527,18 +538,18 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   padding: 0.375rem 0rem;
 }
 
-.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file .input-group-text:hover {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile .btn-file .input-group-text:hover {
   background-color: #e0e0e0;
 }
 
-.competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file input {
+.horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile .btn-file input {
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.competition_area .competition_content .input_area .multiple_input {
+.horizontal_layout_area .horizontal_layout_right .input_area .multiple_input {
   margin: 40px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -552,64 +563,72 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   background-color: #f9f9f9;
 }
 
-.competition_area .competition_content .input_area .multiple_input .multiple_input_area {
+.horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area {
   width: 100%;
   padding: 10px;
   background-color: #fff;
   border-top: 1px solid #c6c6c6;
 }
 
-.competition_area .competition_content .input_area .multiple_input p {
+.horizontal_layout_area .horizontal_layout_right .input_area .multiple_input p {
   width: 100%;
   padding: 10px;
 }
 
-.competition_area .competition_content .input_area .multiple_input .input-group {
+.horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .input-group {
   width: 100%;
 }
 
-.competition_area .competition_content .input_area .multiple_input .input-group .format span {
+.horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .input-group .format span {
   font-size: 12px;
 }
 
-.competition_area .competition_content .input_area .multiple_input .input-group .format img {
+.horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .input-group .format img {
   margin-top: 15px;
   display: block;
   max-width: 300px;
 }
 
-.competition_area .competition_content .privacy {
+.horizontal_layout_area .horizontal_layout_right .input_inquire_area {
+  border: 0;
+}
+
+.horizontal_layout_area .horizontal_layout_right .input_inquire_area p {
+  text-align: center;
+}
+
+.horizontal_layout_area .horizontal_layout_right .privacy {
   width: 100% !important;
 }
 
-.competition_area .competition_content .privacy a {
+.horizontal_layout_area .horizontal_layout_right .privacy a {
   color: #b284f6;
 }
 
-.competition_area .competition_content .privacy a:hover {
+.horizontal_layout_area .horizontal_layout_right .privacy a:hover {
   color: #9454f3;
   text-decoration: underline;
 }
 
-.competition_area .competition_content .btn_submit {
+.horizontal_layout_area .horizontal_layout_right .btn_submit {
   margin: 25px auto;
   background-color: #b284f6;
   width: 45%;
   border-radius: 10px;
 }
 
-.competition_area .competition_content .btn_submit .btn {
+.horizontal_layout_area .horizontal_layout_right .btn_submit .btn {
   font-size: 14px;
   color: #fff;
   width: 100%;
   margin: 0 auto;
 }
 
-.competition_area .competition_content .timeline_area {
+.horizontal_layout_area .horizontal_layout_right .timeline_area {
   margin: 60px 0px 0px 12.5px;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -623,22 +642,22 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
           flex-direction: row-reverse;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item:nth-last-child(1) .timeline_marker:before {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item:nth-last-child(1) .timeline_marker:before {
   display: none;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item:nth-last-child(1) .timeline_marker .timeline_marker_inner::after {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item:nth-last-child(1) .timeline_marker .timeline_marker_inner::after {
   display: none;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_content {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_content {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   min-width: 25%;
   margin-top: -20px;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_content .timeline_content_inner {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_content .timeline_content_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,7 +667,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   padding: 0px 0px 60px 35px;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_marker {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -661,7 +680,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   margin-top: -20px;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_marker:before {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker:before {
   position: absolute;
   top: 0;
   bottom: 0px;
@@ -670,13 +689,13 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   background: #b284f6;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker .timeline_marker_inner {
   z-index: 1;
   line-height: 0;
   position: relative;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner::after {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker .timeline_marker_inner::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -691,7 +710,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   z-index: -1;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner img {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker .timeline_marker_inner img {
   position: absolute;
   left: 50%;
   top: 0%;
@@ -700,9 +719,51 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   width: 50px;
 }
 
-.competition_area .competition_content .timeline_area .timeline_item .timeline_item_meta {
+.horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_item_meta {
   -ms-flex-preferred-size: 0%;
       flex-basis: 0%;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area {
+  margin-top: 40px;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_img {
+  width: 45%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_link .link_btn {
+  width: 60%;
+  margin: 10px auto;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_link .link_btn a {
+  text-align: center;
+  color: #fff;
+  display: block;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_link .inquire_link {
+  width: 60%;
+  margin: 10px auto;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_link .inquire_link a {
+  text-align: center;
+  color: #b284f6;
+  display: block;
+}
+
+.horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_link .inquire_link:hover a {
+  color: #9454f3;
+  text-decoration: underline;
 }
 
 .modalRegistrationForm .modal-dialog .modal-content .modal-body {
@@ -912,13 +973,13 @@ footer .footer_area .footer_copyright p {
 }
 
 @media screen and (min-width: 576px) {
-  .competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile .btn-file {
     width: auto;
   }
-  .competition_area .competition_content .input_area .input-group.input-group-myfile .btn-file .input-group-text {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile .btn-file .input-group-text {
     padding: .375rem .75rem;
   }
-  .competition_area .competition_content .btn_submit {
+  .horizontal_layout_area .horizontal_layout_right .btn_submit {
     width: 25%;
   }
   .modalRegistrationForm .modal-dialog {
@@ -975,28 +1036,28 @@ footer .footer_area .footer_copyright p {
   .news {
     padding: 60px 5%;
   }
-  .competition_area .competition_menu {
+  .horizontal_layout_area .horizontal_layout_left {
     margin: 0px 0px 15px;
     padding: 60px 0% 15px;
     display: inline-block;
   }
-  .competition_area .competition_menu ul {
+  .horizontal_layout_area .horizontal_layout_left ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .competition_area .competition_menu ul li {
+  .horizontal_layout_area .horizontal_layout_left ul li {
     border: 0px;
     border-radius: 0px;
     padding: 0;
     margin: 5px 0px;
   }
-  .competition_area .competition_menu ul li a {
+  .horizontal_layout_area .horizontal_layout_left ul li a {
     color: #2e3233;
     position: relative;
   }
-  .competition_area .competition_menu ul li a::before {
+  .horizontal_layout_area .horizontal_layout_left ul li a::before {
     content: "";
     width: 0;
     height: 0;
@@ -1011,68 +1072,82 @@ footer .footer_area .footer_copyright p {
             transform: translate(calc(100% + 5px), -50%);
     display: none;
   }
-  .competition_area .competition_menu ul li:hover, .competition_area .competition_menu ul li.active {
+  .horizontal_layout_area .horizontal_layout_left ul li:hover, .horizontal_layout_area .horizontal_layout_left ul li.active {
     background-color: transparent;
   }
-  .competition_area .competition_menu ul li:hover a, .competition_area .competition_menu ul li.active a {
+  .horizontal_layout_area .horizontal_layout_left ul li:hover a, .horizontal_layout_area .horizontal_layout_left ul li.active a {
     color: #b284f6;
   }
-  .competition_area .competition_menu ul li:hover a::before, .competition_area .competition_menu ul li.active a::before {
+  .horizontal_layout_area .horizontal_layout_left ul li:hover a::before, .horizontal_layout_area .horizontal_layout_left ul li.active a::before {
     display: block;
   }
-  .competition_area .competition_content {
+  .horizontal_layout_area .horizontal_layout_right {
     display: inline-block;
     padding: 60px 5%;
   }
-  .competition_area .competition_content h3 {
+  .horizontal_layout_area .horizontal_layout_right h3 {
     text-align: center;
     margin-bottom: 40px;
   }
-  .competition_area .competition_content .input_area .input-group {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group {
     margin: 15px auto;
   }
-  .competition_area .competition_content .input_area .input-group label {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group label {
     width: 20%;
     font-size: 15px;
   }
-  .competition_area .competition_content .input_area .input-group label.input-group-text {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group label.input-group-text {
     color: #b284f6;
     background-color: #f9f9f9;
     cursor: pointer;
   }
-  .competition_area .competition_content .input_area .input-group input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group input {
     width: 65%;
     font-size: 15px;
   }
-  .competition_area .competition_content .input_area .input-group.input-group-myfile input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile input {
     width: 50%;
   }
-  .competition_area .competition_content .input_area .input-group.input-group-myfile .input-group-text {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile .input-group-text {
     width: auto;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group .format {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group .format {
     width: auto;
     margin-left: 20%;
   }
-  .competition_area .competition_content .btn_submit .btn {
+  .horizontal_layout_area .horizontal_layout_right .btn_submit .btn {
     font-size: 15px;
   }
-  .competition_area .competition_content .timeline_area {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area {
     margin: 60px 0px 0px 30px;
   }
-  .competition_area .competition_content .timeline_area .timeline_item .timeline_content .timeline_content_inner {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_content .timeline_content_inner {
     padding: 0px 0px 60px 70px;
   }
-  .competition_area .competition_content .timeline_area .timeline_item .timeline_marker:before {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker:before {
     width: 30px;
   }
-  .competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner::after {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker .timeline_marker_inner::after {
     width: 50px;
     height: 50px;
     border: 5px solid #2e3233;
   }
-  .competition_area .competition_content .timeline_area .timeline_item .timeline_marker .timeline_marker_inner img {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_marker .timeline_marker_inner img {
     width: 100px;
+  }
+  .horizontal_layout_area .horizontal_layout_right .signup_success_area {
+    margin-top: 60px;
+  }
+  .horizontal_layout_area .horizontal_layout_right .signup_success_area h3 {
+    margin-top: 25px;
+  }
+  .horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_link .link_btn {
+    width: 45%;
+    margin: 20px auto;
+  }
+  .horizontal_layout_area .horizontal_layout_right .signup_success_area .signup_success_link .inquire_link {
+    width: 45%;
+    margin: 20px auto;
   }
   .news_area h3 {
     margin-bottom: 40px;
@@ -1133,20 +1208,20 @@ footer .footer_area .footer_copyright p {
     font-size: 20px;
     padding: 0px 8px;
   }
-  .competition_area .competition_content .input_area .form_logo {
+  .horizontal_layout_area .horizontal_layout_right .input_area .form_logo {
     width: 80%;
     max-width: 600px;
   }
-  .competition_area .competition_content .input_area .input-group label {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group label {
     font-size: 17px;
   }
-  .competition_area .competition_content .input_area .input-group input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group input {
     font-size: 17px;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group .format span {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group .format span {
     font-size: 15px;
   }
-  .competition_area .competition_content .btn_submit .btn {
+  .horizontal_layout_area .horizontal_layout_right .btn_submit .btn {
     font-size: 17px;
   }
   footer .footer_area .footer_information {
@@ -1251,27 +1326,27 @@ footer .footer_area .footer_copyright p {
   label {
     font-size: 19px;
   }
-  .competition_area .competition_menu ul li a {
+  .horizontal_layout_area .horizontal_layout_left ul li a {
     font-size: 18px;
   }
-  .competition_area .competition_content .input_area {
+  .horizontal_layout_area .horizontal_layout_right .input_area {
     padding: 20px 40px;
   }
-  .competition_area .competition_content .input_area .input-group {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .competition_area .competition_content .input_area .input-group label {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group label {
     width: 20%;
     font-size: 19px;
     text-align: center;
   }
-  .competition_area .competition_content .input_area .input-group input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group input {
     font-size: 19px;
     width: 80%;
   }
-  .competition_area .competition_content .input_area .multiple_input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1279,78 +1354,78 @@ footer .footer_area .footer_copyright p {
         -ms-flex-align: center;
             align-items: center;
   }
-  .competition_area .competition_content .input_area .multiple_input p {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input p {
     width: 20%;
     text-align: center;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area {
     width: 80%;
     border-top: 0px solid #c6c6c6;
     border-left: 1px solid #c6c6c6;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group {
     width: 100%;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group label {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group label {
     text-align: left;
   }
-  .competition_area .competition_content .privacy {
+  .horizontal_layout_area .horizontal_layout_right .privacy {
     text-align: center;
   }
-  .competition_area .competition_content .btn_submit .btn {
+  .horizontal_layout_area .horizontal_layout_right .btn_submit .btn {
     font-size: 19px;
   }
-  .competition_area .competition_content .timeline_area {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area {
     margin: 60px auto;
   }
-  .competition_area .competition_content .timeline_area .timeline_item {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item {
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
         -ms-flex-direction: initial;
             flex-direction: initial;
   }
-  .competition_area .competition_content .timeline_area .timeline_item:nth-child(2n) {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item:nth-child(2n) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .competition_area .competition_content .timeline_area .timeline_item:nth-child(2n) .timeline_content .timeline_content_inner {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item:nth-child(2n) .timeline_content .timeline_content_inner {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 0px 0px 60px 70px;
   }
-  .competition_area .competition_content .timeline_area .timeline_item .timeline_content {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_content {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
-  .competition_area .competition_content .timeline_area .timeline_item .timeline_content .timeline_content_inner {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_content .timeline_content_inner {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     padding: 0px 70px 60px 0px;
   }
-  .competition_area .competition_content .timeline_area .timeline_item .timeline_item_meta {
+  .horizontal_layout_area .horizontal_layout_right .timeline_area .timeline_item .timeline_item_meta {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .competition_area .competition_content .input_area .input-group label {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group label {
     width: 15%;
   }
-  .competition_area .competition_content .input_area .input-group input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group input {
     width: 85%;
   }
-  .competition_area .competition_content .input_area .input-group.input-group-myfile input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile input {
     width: 30%;
   }
-  .competition_area .competition_content .input_area .multiple_input p {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input p {
     width: 15%;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1364,22 +1439,22 @@ footer .footer_area .footer_copyright p {
             align-items: flex-start;
     width: 85%;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group {
     width: 48%;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group label {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group label {
     width: 30%;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group input {
     width: 35%;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group .format {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group .format {
     margin-left: 30%;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group.input-group-myfile label.input-group-text {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group.input-group-myfile label.input-group-text {
     width: auto;
   }
-  .competition_area .competition_content .input_area .multiple_input .multiple_input_area .input-group.input-group-myfile input {
+  .horizontal_layout_area .horizontal_layout_right .input_area .multiple_input .multiple_input_area .input-group.input-group-myfile input {
     width: 30%;
   }
 }

@@ -121,6 +121,16 @@ body {
     color: $main_color !important;
 }
 
+.link_btn{
+    background-color: $main_color;
+    color: $white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    &:hover{
+        background-color: darken($main_color, 10%);
+    }
+}
+
 // bootstrap改寫開始
 .btn-close {
     &:focus {
@@ -304,11 +314,11 @@ header {
 // 首頁index結束
 
 // 競賽辦法competition開始
-.competition_area {
+.horizontal_layout_area {
     max-width: 1500px;
     margin: 0 auto;
 
-    .competition_menu {
+    .horizontal_layout_left {
         margin: 0px auto 15px;
         padding: 30px 8.33333% 15px;
         background-color: $body_bg;
@@ -344,7 +354,7 @@ header {
         }
     }
 
-    .competition_content {
+    .horizontal_layout_right {
         margin: 0 auto;
         padding: 30px 5%;
         display: block;
@@ -640,6 +650,13 @@ header {
             }
         }
 
+        .input_inquire_area{
+            border: 0;
+            p{
+                text-align: center;
+            }
+        }
+
         .privacy {
             width: 100% !important;
 
@@ -751,8 +768,50 @@ header {
                 }
             }
         }
-        
-        
+
+        .signup_success_area{
+            margin-top: 40px;
+
+            .signup_success_img{
+                width: 45%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            h3{
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .signup_success_link{
+                .link_btn{
+                    width: 60%;
+                    margin: 10px auto;
+                    a{
+                        text-align: center;
+                        color: $white;
+                        display: block;
+                    }
+                }
+                .inquire_link{
+                    width: 60%;
+                    margin: 10px auto;
+                    a{
+                        text-align: center;
+                        color: $main_color;
+                        display: block;
+                    }
+                    &:hover{
+                        a{
+                            color: darken($main_color, 10%);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+            }
+        }
+
     }
 }
 // 競賽辦法competition結束
@@ -975,8 +1034,8 @@ footer {
 @media screen and (min-width: 576px) {
 
     // 競賽辦法competition開始
-    .competition_area {
-        .competition_content {
+    .horizontal_layout_area {
+        .horizontal_layout_right {
 
             .input_area {
                 .input-group {
@@ -1092,9 +1151,9 @@ footer {
 // 首頁index結束
 
     // 競賽辦法competition開始
-    .competition_area {
+    .horizontal_layout_area {
 
-        .competition_menu {
+        .horizontal_layout_left {
             margin: 0px 0px 15px;
             padding: 60px 0% 15px;
             display: inline-block;
@@ -1146,7 +1205,7 @@ footer {
             }
         }
 
-        .competition_content {
+        .horizontal_layout_right {
             display: inline-block;
             padding: 60px 5%;
 
@@ -1235,6 +1294,26 @@ footer {
                             }
                         }
                     }
+                }
+            }
+
+            .signup_success_area{
+                margin-top: 60px;
+
+    
+                h3{
+                    margin-top: 25px;
+                }
+                .signup_success_link{
+                    .link_btn{
+                        width: 45%;
+                        margin: 20px auto;
+                    }
+                    .inquire_link{
+                        width: 45%;
+                        margin: 20px auto;
+                    }
+                    
                 }
             }
 
@@ -1371,9 +1450,9 @@ footer {
     // header結束
 
     // 競賽辦法competition開始
-    .competition_area {
+    .horizontal_layout_area {
 
-        .competition_content {
+        .horizontal_layout_right {
             .input_area {
                 .form_logo {
                     width: 80%;
@@ -1540,8 +1619,8 @@ footer {
     }
 
     // 競賽辦法competition開始
-    .competition_area {
-        .competition_menu{
+    .horizontal_layout_area {
+        .horizontal_layout_left{
             ul{
                 li{
                     a{
@@ -1551,7 +1630,7 @@ footer {
             }
         }
 
-        .competition_content {
+        .horizontal_layout_right {
             .input_area {
 
                 padding: 20px 40px;
@@ -1646,8 +1725,8 @@ footer {
 @media screen and (min-width: 1600px) {
 
     // 競賽辦法competition開始
-    .competition_area {
-        .competition_content {
+    .horizontal_layout_area {
+        .horizontal_layout_right {
             .input_area {
                 .input-group {
                     label {
