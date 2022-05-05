@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-5.1.1.min.css">
 
     <!-- this page widgets CSS -->
+    <link rel="stylesheet" href="css/fontawesome-free-6.1.1-web.min.css">
 
     <!-- my core CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -51,7 +52,7 @@
                     </span>
                 </p>
 
-                <form id="form_group" class="input_area">
+                <form class="input_area">
                     <div class="form_logo">
                         <img src="image/logo/sr_logo_form.svg" alt="">
                     </div>
@@ -183,13 +184,13 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form id="form_group_modal" class="input_area">
+                                <form class="input_area">
                                     <div class="form_logo">
                                         <img src="image/logo/sr_logo_form.svg" alt="">
                                     </div>
                                     <div class="input-group input-group-name">
-                                        <label for="inputGroupName"><span>*</span>團體名稱</label>
-                                        <input readonly type="text" class="form-control" id="inputGroupName"
+                                        <label for="inputGroupModalName"><span>*</span>團體名稱</label>
+                                        <input readonly type="text" class="form-control" id="inputGroupModalName"
                                             placeholder="">
                                     </div>
 
@@ -218,7 +219,7 @@
                                                 <input readonly type="text" class="form-control"
                                                     id="inputGroupModalMemberAID">
                                                 <button type="button" class="btn check_member_a_image">
-                                                    <p>查看</p>
+                                                    <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
                                                 </button>
                                                 <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
@@ -252,7 +253,7 @@
                                                     class="form-control" id="inputGroupModalMemberBID">
                                                 <button type="button" class="btn check_member_a_image"
                                                     data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <p>查看</p>
+                                                    <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
                                                 </button>
                                                 <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
@@ -285,7 +286,7 @@
                                                     class="form-control" id="inputGroupModalMemberCID">
                                                 <button type="button" class="btn check_member_a_image"
                                                     data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <p>查看</p>
+                                                    <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
                                                 </button>
                                                 <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
@@ -321,6 +322,8 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap-5.1.1.min.js"></script>
 
+    <script src="js/fontawesome-free-6.1.1.min.js"></script>
+
     <script>
         $(document).ready(function() {
             //nowPage (此頁必留)
@@ -333,26 +336,22 @@
     </script>
 
     <script>
-        const submitBtn = document.querySelector(".registrationFormBtn");
+        var submitBtn = document.querySelector(".registrationFormBtn");
         submitBtn.addEventListener("click", processFormData);
 
         function processFormData(e) {
 
-            //取得表單
-            const formGroup = document.forms["form_group"];
-            const formGroupModal = document.forms["form_group_modal"];
-
             //取得表單的值
-            const name = formGroup.elements.inputGroupName.value;
-            const MemberAName = formGroup.elements.inputGroupMemberAName.value;
-            const MemberAPhone = formGroup.elements.inputGroupMemberAPhone.value;
-            const MemberAMail = formGroup.elements.inputGroupMemberAMail.value;
+            var name = $('#inputGroupName').val();
+            var MemberAName = $('#inputGroupMemberAName').val();
+            var MemberAPhone = $('#inputGroupMemberAPhone').val();
+            var MemberAMail = $('#inputGroupMemberAMail').val();
 
             //改變modal表單的值
-            const modalName = formGroupModal.elements.inputGroupName.value = name;
-            const modalMemberAName = formGroupModal.elements.inputGroupModalMemberAName.value = MemberAName;
-            const modalMemberAPhone = formGroupModal.elements.inputGroupModalMemberAPhone.value = MemberAPhone;
-            const modalMemberAMail = formGroupModal.elements.inputGroupModalMemberAMail.value = MemberAMail;
+            $('#inputGroupModalName').val(name);
+            $('#inputGroupModalMemberAName').val(MemberAName);
+            $('#inputGroupModalMemberAPhone').val(MemberAPhone);
+            $('#inputGroupModalMemberAMail').val(MemberAMail);
         }
 
 
