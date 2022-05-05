@@ -660,21 +660,7 @@ header {
                 }
             }
 
-            .btn_inquire{
-                width: 45%;
-                margin: 25px auto;
-                display: block;
-                background-color: $main_color;
-                color: $white;
-                &:hover{
-                    background-color: darken($main_color, 10%);
-                }
-                .inquireFormBtn{
-                    margin: 0 auto;
-                    display: block;
-                    color: $white;
-                }
-            }
+            
         }
 
         .input_inquire_area{
