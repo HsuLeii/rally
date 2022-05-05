@@ -600,6 +600,24 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   max-width: 300px;
 }
 
+.horizontal_layout_area .horizontal_layout_right .input_area .btn_inquire {
+  width: 45%;
+  margin: 25px auto;
+  display: block;
+  background-color: #b284f6;
+  color: #fff;
+}
+
+.horizontal_layout_area .horizontal_layout_right .input_area .btn_inquire:hover {
+  background-color: #9454f3;
+}
+
+.horizontal_layout_area .horizontal_layout_right .input_area .btn_inquire .inquireFormBtn {
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+}
+
 .horizontal_layout_area .horizontal_layout_right .input_inquire_area {
   border: 0;
 }
