@@ -605,6 +605,7 @@ header {
                             cursor: pointer;
                             border-radius: 0px;
                             padding: 0.375rem 0rem;
+                            margin: 0;
 
                             &:hover {
                                 background-color: darken($light_grey, 10%);
@@ -658,13 +659,6 @@ header {
                     }
                 }
             }
-        }
-
-        .input_inquire_area{
-            border: 0;
-            p{
-                text-align: center;
-            }
 
             .btn_inquire{
                 width: 45%;
@@ -683,6 +677,13 @@ header {
             }
         }
 
+        .input_inquire_area{
+            border: 0;
+            p{
+                text-align: center;
+            }
+        }
+
         .input_search_result{
             .input-group{
                 &.input-group-myfile{
@@ -690,6 +691,7 @@ header {
                         width: 45%;
                     }
                     .check_member_a_image{
+                        width: 25%;
                         padding: 0.375rem 0.1rem;
                         background-color: $light_grey;
                         border: 1px solid $middle_grey;
@@ -711,6 +713,7 @@ header {
                             color: $white;
                             padding: 0.375rem 0.1rem;
                             background-color: $main_color;
+                            border: 1px solid $main_color;
                             &:hover{
                                 background-color: darken($main_color, 10%);
                             }
@@ -1115,6 +1118,18 @@ footer {
                 }
             }
 
+            .input_search_result{
+                .input-group{
+                    &.input-group-myfile{
+                        .check_member_a_image{
+                            width: auto;
+                            padding: .375rem .75rem;
+                        }
+
+                    }
+                }
+            }
+
             .btn_submit {
                 width: 25%;
             }
@@ -1322,6 +1337,16 @@ footer {
                                 width: auto;
                                 margin-left: 20%;
                             }
+                        }
+                    }
+                }
+            }
+
+            .input_search_result{
+                .input-group{
+                    &.input-group-myfile{
+                        input{
+                            width: 40%;
                         }
                     }
                 }
@@ -1742,6 +1767,19 @@ footer {
                 }
             }
 
+            .input_search_result{
+                .input-group{
+                    &.input-group-myfile{
+                        .check_member_a_image{
+                            p{
+                                width: auto;
+                            }
+                        }
+
+                    }
+                }
+            }
+
             .privacy {
                 text-align: center;
             }
@@ -1841,6 +1879,21 @@ footer {
 
                                 input {
                                     width: 30%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .input_search_result{
+
+                .multiple_input {
+                    .multiple_input_area {
+
+                        .input-group {
+                            &.input-group-myfile {
+                                input {
+                                    width: 25%;
                                 }
                             }
                         }
