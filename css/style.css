@@ -432,22 +432,22 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
 
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(1),
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(2) {
-  width: 10%;
+  width: 15%;
 }
 
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(3),
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(4),
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_one tbody tr:nth-child(1) > td:nth-child(5) {
-  width: calc(80% / 3);
+  width: calc(70% / 3);
 }
 
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(1) {
-  width: 10%;
+  width: 20%;
 }
 
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(2),
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_information_two tbody tr:nth-child(1) > td:nth-child(3) {
-  width: calc(90% / 2);
+  width: calc(80% / 2);
 }
 
 .horizontal_layout_area .horizontal_layout_right .table-responsive table.table_competition_award tbody tr:nth-child(1) > td:nth-child(1),
