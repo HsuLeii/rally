@@ -281,21 +281,12 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-left: 18px;
+  border-bottom: 1px solid transparent;
 }
 
 .news .news_content .news_item .news_item_title a:hover {
-  color: #161818;
-  border-bottom: 3px solid;
-}
-
-.news .news_content .news_item.important_information .news_item_title a {
   color: #b284f6;
   border-bottom: 1px solid #b284f6;
-}
-
-.news .news_content .news_item.important_information .news_item_title a:hover {
-  color: #9454f3;
-  border-bottom: 3px solid;
 }
 
 .horizontal_layout_area {

@@ -293,27 +293,12 @@ header {
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     margin-left: 18px;
+                    border-bottom: 1px solid $transparent;
 
                     &:hover {
-                        color: darken($dark_grey, 10%);
-                        border-bottom: 3px solid;
+                            color: $main_color;
+                            border-bottom: 1px solid $main_color;
                     }
-                }
-            }
-
-            &.important_information {
-                .news_item_title {
-                    a {
-                        color: $main_color;
-                        border-bottom: 1px solid $main_color;
-
-                        &:hover {
-                            color: darken($main_color, 10%);
-                            border-bottom: 3px solid;
-                        }
-                    }
-
-
                 }
             }
         }
