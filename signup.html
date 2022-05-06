@@ -174,7 +174,6 @@
                 </div>
 
                 <!-- Modal#modalRegistrationForm 報名表確認 start -->
-
                 <div class="modal fade modalRegistrationForm" id="modalRegistrationForm" data-bs-keyboard="false"
                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -248,15 +247,15 @@
                                                     id="inputGroupModalMemberBMail" placeholder="">
                                             </div>
                                             <div class="input-group input-group-myfile">
-                                                <label for="inputGroupModalMemberBID"><span>*</span>身分證件</label>
-                                                <input readonly accept=".pdf,.jpg,.jpeg,.png" type="file"
-                                                    class="form-control" id="inputGroupModalMemberBID">
-                                                <button type="button" class="btn check_member_a_image"
-                                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <label for="inputGroupModalMemberAID"><span>*</span>身分證件</label>
+                                                <input readonly type="text" class="form-control"
+                                                    id="inputGroupModalMemberAID">
+                                                <button type="button" class="btn check_member_a_image">
                                                     <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
                                                 </button>
                                                 <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                                    <img src="" alt="" class="member_a_image">
                                                 </div>
                                             </div>
                                         </div>
@@ -281,15 +280,15 @@
                                                     id="inputGroupModalMemberCMail" placeholder="">
                                             </div>
                                             <div class="input-group input-group-myfile">
-                                                <label for="inputGroupModalMemberCID"><span>*</span>身分證件</label>
-                                                <input readonly accept=".pdf,.jpg,.jpeg,.png" type="file"
-                                                    class="form-control" id="inputGroupModalMemberCID">
-                                                <button type="button" class="btn check_member_a_image"
-                                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <label for="inputGroupModalMemberAID"><span>*</span>身分證件</label>
+                                                <input readonly type="text" class="form-control"
+                                                    id="inputGroupModalMemberAID">
+                                                <button type="button" class="btn check_member_a_image">
                                                     <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
                                                 </button>
                                                 <div class="format">
                                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                                    <img src="" alt="" class="member_a_image">
                                                 </div>
                                             </div>
                                         </div>
@@ -301,7 +300,8 @@
                                 <p class="privacy"><span>*</span>點擊「送出」即表示您同意《科普閱讀拉力賽：試辦賽》的<a href="">《隱私權保護政策》</a></p>
                                 <div class="btn_submit">
                                     <input class="btn registrationFormBtn" type="submit" data-bs-toggle="modal"
-                                        data-bs-target="#modalRegistrationForm" value="確認送出" onclick="location.href='signup_success.html'">
+                                        data-bs-target="#modalRegistrationForm" value="確認送出"
+                                        onclick="location.href='signup_success.html'">
                                 </div>
                             </div>
                         </div>
@@ -325,17 +325,18 @@
     <script src="js/fontawesome-free-6.1.1.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             //nowPage (此頁必留)
             $('.navTab-Signup').addClass('active');
-            $('header').load('header.html', function(){
-                $('.navTab-Signup').addClass('active');//nowPage
+            $('header').load('header.html', function () {
+                $('.navTab-Signup').addClass('active'); //nowPage
             });
             $('footer').load('footer.html');
-        }); 
+        });
     </script>
 
     <script>
+        //改變表單的值
         var submitBtn = document.querySelector(".registrationFormBtn");
         submitBtn.addEventListener("click", processFormData);
 
@@ -354,7 +355,7 @@
             $('#inputGroupModalMemberAMail').val(MemberAMail);
         }
 
-
+        //測試圖片上傳效果
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -366,7 +367,6 @@
                 };
             }
         }
-
         var file = document.getElementById("inputGroupMemberAID");
         var fileName = document.getElementById("inputGroupModalMemberAID");
         var showFileName = document.getElementById("inputGroupMemberAIDShow");

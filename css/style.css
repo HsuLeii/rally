@@ -353,9 +353,10 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   margin-bottom: 10px;
 }
 
-.horizontal_layout_area .horizontal_layout_right h4 {
+.horizontal_layout_area .horizontal_layout_right .title_search_result {
   text-align: center;
   margin-top: 60px;
+  display: none;
 }
 
 .horizontal_layout_area .horizontal_layout_right p span {
@@ -520,6 +521,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
 
 .horizontal_layout_area .horizontal_layout_right .input_area .input-group .form-control[readonly] {
   background-color: #fff;
+  border: 0;
 }
 
 .horizontal_layout_area .horizontal_layout_right .input_area .input-group.input-group-myfile {
@@ -632,6 +634,10 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   text-align: center;
 }
 
+.horizontal_layout_area .horizontal_layout_right .input_search_result {
+  display: none;
+}
+
 .horizontal_layout_area .horizontal_layout_right .input_search_result .input-group.input-group-myfile input {
   width: calc(40% - 4px);
 }
@@ -641,6 +647,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   padding: 0.375rem 0.1rem;
   background-color: #f9f9f9;
   border: 1px solid #c6c6c6;
+  margin-left: 0px;
 }
 
 .horizontal_layout_area .horizontal_layout_right .input_search_result .input-group.input-group-myfile .check_member_a_image p {
