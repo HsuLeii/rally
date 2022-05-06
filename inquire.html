@@ -64,16 +64,20 @@
                         <label for="inputGroupMemberMail"><span>*</span>E-mail</label>
                         <input type="text" class="form-control" id="inputGroupMemberMail" placeholder="請輸入團體名稱">
                     </div>
-                    <div class="btn btn_inquire">
-                        <button type="button" class="inquireFormBtn"><i class="fa-solid fa-magnifying-glass svg_icon"></i>查詢</button>
+                    <div class="revise">
+                        <div class="btn btn_inquire">
+                            <button type="button" class="inquireFormBtn">
+                                <i class="fa-solid fa-magnifying-glass svg_icon"></i>查詢</button>
+                        </div>
                     </div>
+                    
                 </form>
                 <h4>查詢結果</h4>
                 <form class="input_area input_search_result">
 
                     <div class="input-group input-group-name">
                         <label for="inputGroupName"><span>*</span>團體名稱</label>
-                        <input type="text" class="form-control" id="inputGroupName" placeholder="請輸入團體名稱">
+                        <input type="text" class="form-control" id="inputGroupName" placeholder="請輸入團體名稱" value="宋大小聯盟">
                     </div>
 
                     <div class="multiple_input">
@@ -84,32 +88,30 @@
                             <div class="input-group">
                                 <label for="inputGroupMemberAName"><span>*</span>姓名</label>
                                 <input type="text" class="form-control" id="inputGroupMemberAName"
-                                    placeholder="請輸入您的姓名">
+                                    placeholder="請輸入您的姓名" value="宋大大">
                             </div>
                             <div class="input-group">
                                 <label for="inputGroupMemberAPhone"><span>*</span>電話</label>
                                 <input type="text" class="form-control" id="inputGroupMemberAPhone"
-                                    placeholder="請輸入您的電話">
+                                    placeholder="請輸入您的電話" value="0912345678">
                             </div>
                             <div class="input-group">
                                 <label for="inputGroupMemberAMail"><span>*</span>E-mail</label>
                                 <input type="text" class="form-control" id="inputGroupMemberAMail"
-                                    placeholder="請輸入您的信箱">
+                                    placeholder="請輸入您的信箱" value="abc123@gmail.com">
                             </div>
                             <div class="input-group input-group-myfile">
                                 <label for="inputGroupMemberAID"><span>*</span>身分證件</label>
 
-                                <input readonly id="inputGroupMemberAIDShow" class="form-control" placeholder="請上傳...">
+                                <input readonly id="inputGroupMemberAIDShow" class="form-control" placeholder="請上傳..." value="宋大大_A123456789">
                                 <button type="button" class="btn check_member_a_image">
                                     <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
                                 </button>
                                 <div class="btn-file" tabindex="500">
                                     <label class="input-group-text" for="inputGroupMemberAID">上傳</label>
                                     <input accept=".pdf,.jpg,.jpeg,.png" type="file" id="inputGroupMemberAID"
-                                        name="file-studentsAccount" class="fileUpload-file"
-                                        onchange="IDFile();readURL(this);">
+                                        name="file-studentsAccount" class="fileUpload-file" onchange="IDFile();readURL(this);">
                                 </div>
-
 
                                 <div class="format">
                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
@@ -123,30 +125,31 @@
                         <p>組員B</p>
                         <div class="multiple_input_area">
                             <div class="input-group">
-                                <label for="inputGroupMemberBName"><span>*</span>姓名</label>
-                                <input type="text" class="form-control" id="inputGroupMemberBName"
-                                    placeholder="請輸入您的姓名">
+                                <label for="inputGroupMemberAName"><span>*</span>姓名</label>
+                                <input type="text" class="form-control" id="inputGroupMemberAName"
+                                    placeholder="請輸入您的姓名" value="宋大大">
                             </div>
                             <div class="input-group">
-                                <label for="inputGroupMemberBPhone"><span>*</span>電話</label>
-                                <input type="text" class="form-control" id="inputGroupMemberBPhone"
-                                    placeholder="請輸入您的電話">
+                                <label for="inputGroupMemberAPhone"><span>*</span>電話</label>
+                                <input type="text" class="form-control" id="inputGroupMemberAPhone"
+                                    placeholder="請輸入您的電話" value="0912345678">
                             </div>
                             <div class="input-group">
-                                <label for="inputGroupMemberBMail"><span>*</span>E-mail</label>
-                                <input type="text" class="form-control" id="inputGroupMemberBMail"
-                                    placeholder="請輸入您的信箱">
+                                <label for="inputGroupMemberAMail"><span>*</span>E-mail</label>
+                                <input type="text" class="form-control" id="inputGroupMemberAMail"
+                                    placeholder="請輸入您的信箱" value="abc123@gmail.com">
                             </div>
                             <div class="input-group input-group-myfile">
-                                <label for="inputGroupMemberBID"><span>*</span>身分證件</label>
-                                <input readonly accept=".pdf,.jpg,.jpeg,.png" class="form-control" placeholder="請上傳...">
-                                <div class="btn-file" tabindex="500">
-                                    <label class="input-group-text" for="inputGroupMemberBID">瀏覽...</label>
-                                    <input accept=".pdf,.jpg,.jpeg,.png" type="file" id="inputGroupMemberBID"
-                                        name="file-studentsAccount" class="fileUpload-file">
-                                </div>
+                                <label for="inputGroupMemberAID"><span>*</span>身分證件</label>
+
+                                <input readonly id="inputGroupMemberAIDShow" class="form-control" placeholder="請上傳..." value="宋大大_A123456789">
+                                <button type="button" class="btn check_member_a_image" disabled>
+                                    <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
+                                </button>
+
                                 <div class="format">
                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                    <img src="" alt="" class="member_a_image">
                                 </div>
                             </div>
                         </div>
@@ -156,38 +159,40 @@
                         <p>組員C</p>
                         <div class="multiple_input_area">
                             <div class="input-group">
-                                <label for="inputGroupMemberCName"><span>*</span>姓名</label>
-                                <input type="text" class="form-control" id="inputGroupMemberCName"
-                                    placeholder="請輸入您的姓名">
+                                <label for="inputGroupMemberAName"><span>*</span>姓名</label>
+                                <input type="text" class="form-control" id="inputGroupMemberAName"
+                                    placeholder="請輸入您的姓名" value="宋大大">
                             </div>
                             <div class="input-group">
-                                <label for="inputGroupMemberCPhone"><span>*</span>電話</label>
-                                <input type="text" class="form-control" id="inputGroupMemberCPhone"
-                                    placeholder="請輸入您的電話">
+                                <label for="inputGroupMemberAPhone"><span>*</span>電話</label>
+                                <input type="text" class="form-control" id="inputGroupMemberAPhone"
+                                    placeholder="請輸入您的電話" value="0912345678">
                             </div>
                             <div class="input-group">
-                                <label for="inputGroupMemberCMail"><span>*</span>E-mail</label>
-                                <input type="text" class="form-control" id="inputGroupMemberCMail"
-                                    placeholder="請輸入您的信箱">
+                                <label for="inputGroupMemberAMail"><span>*</span>E-mail</label>
+                                <input type="text" class="form-control" id="inputGroupMemberAMail"
+                                    placeholder="請輸入您的信箱" value="abc123@gmail.com">
                             </div>
                             <div class="input-group input-group-myfile">
-                                <label for="inputGroupMemberCID"><span>*</span>身分證件</label>
-                                <input readonly accept=".pdf,.jpg,.jpeg,.png" class="form-control" placeholder="請上傳...">
-                                <div class="btn-file" tabindex="500">
-                                    <label class="input-group-text" for="inputGroupMemberCID">瀏覽...</label>
-                                    <input accept=".pdf,.jpg,.jpeg,.png" type="file" id="inputGroupMemberCID"
-                                        name="file-studentsAccount" class="fileUpload-file">
-                                </div>
+                                <label for="inputGroupMemberAID"><span>*</span>身分證件</label>
+
+                                <input readonly id="inputGroupMemberAIDShow" class="form-control" placeholder="請上傳..." value="宋大大_A123456789">
+                                <button type="button" class="btn check_member_a_image" disabled>
+                                    <p><i class="fa-solid fa-magnifying-glass svg_icon"></i>查看</p>
+                                </button>
 
                                 <div class="format">
                                     <span>檔案格式：jpg/ jpeg/ png/ pdf<br />檔案名稱：姓名_身分證字號</span>
+                                    <img src="" alt="" class="member_a_image">
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="btn btn_inquire">
-                        <button type="button" class="inquireFormBtn">修改</button>
+                    <div class="revise">
+                        <p>資料已修改!</p>
+                        <div class="btn btn_inquire btn_revise">
+                            <button type="button" class="inquireFormBtn">修改</button>
+                        </div>
                     </div>
                 </form>
 
@@ -216,13 +221,40 @@
         });
     </script>
 
-<script>
-    $(document).ready(function () {
-        $(".check_member_a_image").click(function () {
-                        $(".member_a_image").attr('src', 'image/slide/slide_index.png');
+    <script>
+        $(document).ready(function () {
+            $(".check_member_a_image").click(function () {
+                $(".member_a_image").attr('src', 'image/slide/slide_index.png');
+            });
+            $(".btn_revise").click(function () {
+                $(".revise p").show();
+            });
+            
+        });
+
+        
+
+        var file = document.getElementById("inputGroupMemberAID");
+        var fileName = document.getElementById("inputGroupModalMemberAID");
+        var showFileName = document.getElementById("inputGroupMemberAIDShow");
+
+        function IDFile() {
+            showFileName.value = file.value;
+            fileName.value = file.value;
+        }
+        
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.readAsDataURL(input.files[0]);
+                reader.onload = function (e) {
+                    $(".check_member_a_image").click(function () {
+                        $(".member_a_image").attr('src', e.target.result);
                     });
-    });
-</script>
+                };
+            }
+        }
+    </script>
 
 </body>
 
