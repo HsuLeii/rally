@@ -264,7 +264,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
 
 .news .news_content .news_item .news_item_title {
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: super;
   width: calc(100% - 110px);
   line-height: 0%;
 }
@@ -306,12 +306,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
 
 .news .news_content .news_item .news_item_date {
   display: inline-block;
-  vertical-align: text-top;
-  float: right;
-}
-
-.news .news_content .news_item .news_item_date p {
-  letter-spacing: normal;
+  vertical-align: top;
 }
 
 .horizontal_layout_area {
