@@ -1318,8 +1318,13 @@ footer .footer_area .footer_copyright p {
     font-size: 17px;
   }
   header nav .container-fluid .navbar-brand {
-    width: auto;
-    height: 50px;
+    width: 30%;
+    max-width: 400px;
+  }
+  header nav .container-fluid .navbar-collapse {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   header nav .container-fluid .navbar-collapse ul li .nav-link {
     font-size: 20px;

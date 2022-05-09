@@ -1610,11 +1610,12 @@ footer {
             .container-fluid {
 
                 .navbar-brand {
-                    width: auto;
-                    height: 50px;
+                    width: 30%;
+                    max-width: 400px;
                 }
 
                 .navbar-collapse {
+                    justify-content: flex-end;
                     ul {
                         li {
                             .nav-link {
