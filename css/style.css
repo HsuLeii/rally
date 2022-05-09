@@ -286,7 +286,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   width: auto;
   max-width: calc(100% - 40px);
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 35px;
 }
 
 .news .news_content .news_item .news_item_title .news_link a {
