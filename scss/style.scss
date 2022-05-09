@@ -247,10 +247,12 @@ header {
 
         h4 {
             color: $main_color;
+            word-wrap: break-word;
         }
 
         a {
             color: $red;
+            width: 25%;
 
             &:hover {
                 color: darken($red, 10%);
@@ -274,8 +276,7 @@ header {
         display: block;
 
         .news_item {
-            display: flex;
-            justify-content: space-between;
+            display: block;
             margin: 15px auto;
             padding: 0 8px;
 
@@ -284,41 +285,67 @@ header {
             }
 
             .news_item_title {
-                display: flex;
-                align-items: center;
-                width: calc(100% - 130px);
-
-                img {
-                    width: 20px;
+                display: inline-block;
+                vertical-align: text-top;
+                width: calc(100% - 100px);
+                .news_icon{
                     display: inline-block;
 
-                    &~a {
-                        margin-left: 5px;
+                    img {
+                        width: 20px;
+                        vertical-align: text-top;
                     }
                 }
 
-                a {
+                .news_link{
                     width: auto;
-                    max-width: calc(100% - 25px);
+                    max-width: calc(100% - 30px);
                     display: inline-block;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    margin-left: 25px;
-                    border-bottom: 1px solid $transparent;
 
-                    &:hover {
-                        color: $main_color;
-                        border-bottom: 1px solid $main_color;
+                    a {
+                        width: 100%;
+                        display: inline-block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        border-bottom: 1px solid transparent;
+
+                        &:hover {
+                            color: $main_color;
+                            border-bottom: 1px solid $main_color;
+                        }
                     }
                 }
+
+                // img {
+                //     width: 20px;
+                //     display: inline-block;
+
+                //     &~a {
+                //         margin-left: 5px;
+                //     }
+                // }
+
+                // a {
+                //     width: auto;
+                //     max-width: calc(100% - 25px);
+                //     display: inline-block;
+                //     overflow: hidden;
+                //     text-overflow: ellipsis;
+                //     white-space: nowrap;
+                //     margin-left: 25px;
+                //     border-bottom: 1px solid $transparent;
+
+                //     &:hover {
+                //         color: $main_color;
+                //         border-bottom: 1px solid $main_color;
+                //     }
+                // }
             }
 
             .news_item_date {
-
-                p {
-                    text-align: left;
-                }
+                display: inline-block;
+                vertical-align: text-top;
             }
         }
     }

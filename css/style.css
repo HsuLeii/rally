@@ -222,10 +222,12 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
 
 .news .news_title h4 {
   color: #b284f6;
+  word-wrap: break-word;
 }
 
 .news .news_title a {
   color: #ff0000;
+  width: 25%;
 }
 
 .news .news_title a:hover {
@@ -251,12 +253,7 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
 }
 
 .news .news_content .news_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: block;
   margin: 15px auto;
   padding: 0 8px;
 }
@@ -266,42 +263,43 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
 }
 
 .news .news_content .news_item .news_item_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: calc(100% - 130px);
+  display: inline-block;
+  vertical-align: text-top;
+  width: calc(100% - 100px);
 }
 
-.news .news_content .news_item .news_item_title img {
-  width: 20px;
+.news .news_content .news_item .news_item_title .news_icon {
   display: inline-block;
 }
 
-.news .news_content .news_item .news_item_title img ~ a {
-  margin-left: 5px;
+.news .news_content .news_item .news_item_title .news_icon img {
+  width: 20px;
+  vertical-align: text-top;
 }
 
-.news .news_content .news_item .news_item_title a {
+.news .news_content .news_item .news_item_title .news_link {
   width: auto;
-  max-width: calc(100% - 25px);
+  max-width: calc(100% - 30px);
+  display: inline-block;
+}
+
+.news .news_content .news_item .news_item_title .news_link a {
+  width: 100%;
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-left: 25px;
   border-bottom: 1px solid transparent;
 }
 
-.news .news_content .news_item .news_item_title a:hover {
+.news .news_content .news_item .news_item_title .news_link a:hover {
   color: #b284f6;
   border-bottom: 1px solid #b284f6;
 }
 
-.news .news_content .news_item .news_item_date p {
-  text-align: left;
+.news .news_content .news_item .news_item_date {
+  display: inline-block;
+  vertical-align: text-top;
 }
 
 .horizontal_layout_area {
