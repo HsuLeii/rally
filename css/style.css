@@ -310,6 +310,10 @@ header nav .container-fluid .navbar-collapse ul li.nav-item .nav-link {
   float: right;
 }
 
+.news .news_content .news_item .news_item_date p {
+  letter-spacing: normal;
+}
+
 .horizontal_layout_area {
   max-width: 1500px;
   margin: 0 auto;
