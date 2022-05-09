@@ -248,11 +248,11 @@ header {
         h4 {
             color: $main_color;
             word-wrap: break-word;
+            width: 75%;
         }
 
         a {
             color: $red;
-            width: 25%;
 
             &:hover {
                 color: darken($red, 10%);
@@ -287,7 +287,8 @@ header {
             .news_item_title {
                 display: inline-block;
                 vertical-align: text-top;
-                width: calc(100% - 100px);
+                width: calc(100% - 110px);
+                line-height: 0%;
                 .news_icon{
                     display: inline-block;
 
@@ -295,12 +296,17 @@ header {
                         width: 20px;
                         vertical-align: text-top;
                     }
+
+                    &~.news_link{
+                        margin-left: 0;
+                    }
                 }
 
                 .news_link{
                     width: auto;
                     max-width: calc(100% - 30px);
                     display: inline-block;
+                    margin-left: 25px;
 
                     a {
                         width: 100%;
@@ -309,6 +315,7 @@ header {
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         border-bottom: 1px solid transparent;
+                        line-height: initial;
 
                         &:hover {
                             color: $main_color;
@@ -346,6 +353,7 @@ header {
             .news_item_date {
                 display: inline-block;
                 vertical-align: text-top;
+                float: right;
             }
         }
     }
